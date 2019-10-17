@@ -1,5 +1,8 @@
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static utils.Console.leftpad;
 
@@ -17,6 +20,7 @@ public class Inspector {
 
         inspectSuperclass(aClass, obj, recursive, depth);
         inspectInterfaces(aClass, obj, recursive, depth);
+        inspectConstructor(aClass, depth);
 
         System.out.println();
     }
@@ -47,6 +51,30 @@ public class Inspector {
                 String name = i.getSimpleName();
                 leftpad("name: " + name, indentation + 1);
                 inspectClass(i, obj, recursive, indentation + 1);
+            }
+        }
+    }
+
+    private void inspectConstructor(Class c, int depth) {
+        Constructor[] constructors = c.getConstructors();
+
+        int indentation = depth + 1;
+
+        if (constructors.length > 0) {
+            for (Constructor constructor : constructors) {
+                leftpad("CONSTRUCTOR", indentation);
+                leftpad("name: " + constructor.getName(), indentation + 1);
+
+                String params = Arrays.stream(constructor.getParameterTypes())
+                    .map(Class::getTypeName)
+                    .collect(Collectors.joining(", "));
+
+                if (!params.isEmpty()) {
+                    leftpad("parameters: [" + params + "]", indentation + 1);
+                }
+
+                String modifier = Modifier.toString(constructor.getModifiers());
+                leftpad("modifiers: " + modifier, indentation + 1);
             }
         }
     }
