@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 import static utils.Console.leftpad;
 
 public class Inspector {
@@ -13,6 +16,7 @@ public class Inspector {
         leftpad("CLASS: " + className, depth);
 
         inspectSuperclass(aClass, obj, recursive, depth);
+        inspectInterfaces(aClass, obj, recursive, depth);
 
         System.out.println();
     }
@@ -29,6 +33,21 @@ public class Inspector {
             String name = superclass.getName();
             leftpad("SUPERCLASS: " + name, indentation);
             inspectClass(superclass, obj, recursive, indentation + 1);
+        }
+    }
+
+    private void inspectInterfaces(Class c, Object obj, boolean recursive, int depth) {
+        List<Class> interfaces = Arrays.asList(c.getInterfaces());
+
+        int indentation = depth + 1;
+
+        if (!interfaces.isEmpty()) {
+            for (Class i : interfaces) {
+                leftpad("INTERFACE", indentation);
+                String name = i.getSimpleName();
+                leftpad("name: " + name, indentation + 1);
+                inspectClass(i, obj, recursive, indentation + 1);
+            }
         }
     }
 }
