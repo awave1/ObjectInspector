@@ -147,7 +147,7 @@ public class Inspector {
                         leftpad("value: null", indentation + 1);
                     } else {
                         if (!recursive) {
-                            leftpad("value: " + valueObj.getClass().getName() + "@" + valueObj.getClass().hashCode(), indentation + 1);
+                            leftpad("referenceValue: " + valueObj.getClass().getName() + "@" + valueObj.getClass().hashCode(), indentation + 1);
                         } else {
                             leftpad("value: ", indentation + 1);
                             inspectClass(typeClass, valueObj, true, indentation + 2);
