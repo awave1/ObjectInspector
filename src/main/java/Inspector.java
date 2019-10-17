@@ -1,6 +1,4 @@
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,6 +21,7 @@ public class Inspector {
         inspectInterfaces(aClass, obj, recursive, depth);
         inspectConstructor(aClass, depth);
         inspectMethods(aClass, depth);
+        inspectFields(aClass, obj, recursive, depth);
 
         System.out.println();
     }
@@ -108,5 +107,76 @@ public class Inspector {
                 }
             }
         }
+    }
+
+    private void inspectFields(Class c, Object obj, boolean recursive, int depth) {
+        List<Field> fields = Arrays.asList(c.getDeclaredFields());
+
+        int indentation = depth + 1;
+
+        if (!fields.isEmpty()) {
+            for (Field field : fields) {
+                leftpad("FIELD", indentation);
+                field.setAccessible(true);
+
+                String name = field.getName();
+                Class typeClass = field.getType();
+                String modifiers = Modifier.toString(field.getModifiers());
+
+                leftpad("name: " + name, indentation + 1);
+                leftpad("type: " + typeClass.getSimpleName(), indentation + 1);
+                leftpad("modifiers: " + modifiers, indentation + 1);
+
+                try {
+                    Object valueObj = field.get(obj);
+                    if (typeClass.isPrimitive()) {
+                        leftpad("value: " + valueObj.toString(), indentation + 1);
+                    } else if (typeClass.isArray()) {
+                        leftpad("value: ", indentation + 1);
+                        inspectArray(typeClass, valueObj, recursive, indentation + 2);
+                    } else if (valueObj == null) {
+                        leftpad("value: null", indentation + 1);
+                    } else {
+                        if (!recursive) {
+                            leftpad("value: " + valueObj.getClass().getName() + "@" + valueObj.getClass().hashCode(), indentation + 1);
+                        } else {
+                            leftpad("value: ", indentation + 1);
+                            inspectClass(typeClass, valueObj, true, indentation + 2);
+                        }
+                    }
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
+    }
+
+    private void inspectArray(Class c, Object obj, boolean recursive, int depth) {
+        int length = Array.getLength(obj);
+
+        int indentation = depth + 1;
+
+        leftpad("Array: [", indentation, length > 0 ? "\n" : "");
+
+        Class componentType = c.getComponentType();
+
+        for (int i = 0; i < length; i++) {
+            Object o = Array.get(obj, i);
+            if (componentType.isPrimitive()) {
+                leftpad(o, indentation + 1);
+            } else if (componentType.isArray()) {
+                inspectArray(o.getClass(), o, recursive, indentation + 1);
+            } else if (o == null) {
+                leftpad("null", indentation + 1);
+            } else {
+                if (recursive) {
+                    inspectClass(o.getClass(), o, true, indentation + 1);
+                } else {
+                    leftpad("value: " + o.getClass().getName() + "@" + o.getClass().hashCode(), indentation + 1);
+                }
+            }
+        }
+        leftpad("]", length > 0 ? indentation : 0);
     }
 }
