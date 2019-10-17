@@ -1,3 +1,4 @@
+package data;
 
 public abstract class ClassC extends ClassD implements InterfaceA {
 
@@ -17,7 +18,7 @@ public abstract class ClassC extends ClassD implements InterfaceA {
     }
 
     public String toString() {
-        return "ClassC";
+        return "data.ClassC";
     }
 
     public void func0(int a, boolean c) throws Exception {

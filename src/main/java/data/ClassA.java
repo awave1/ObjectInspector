@@ -1,3 +1,4 @@
+package data;
 
 public final class ClassA implements java.io.Serializable, Runnable {
 
@@ -31,7 +32,7 @@ public final class ClassA implements java.io.Serializable, Runnable {
     }
 
     public String toString() {
-        return "ClassA";
+        return "data.ClassA";
     }
 
     private void printSomething() {

@@ -1,3 +1,4 @@
+package data;
 
 public class ClassD {
 
@@ -14,7 +15,7 @@ public class ClassD {
     }
 
     public String toString() {
-        return "ClassD";
+        return "data.ClassD";
     }
 
     public int getVal3() {

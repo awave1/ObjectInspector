@@ -1,3 +1,4 @@
+package data;
 
 public class ClassB extends ClassC implements Runnable {
 
@@ -13,7 +14,7 @@ public class ClassB extends ClassC implements Runnable {
     }
 
     public String toString() {
-        return "ClassB";
+        return "data.ClassB";
     }
 
     public void func3(int a) {

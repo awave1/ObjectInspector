@@ -1,3 +1,4 @@
+package data;
 
 public interface InterfaceA extends InterfaceB {
 
