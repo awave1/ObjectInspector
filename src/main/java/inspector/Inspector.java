@@ -3,9 +3,11 @@ package inspector;
 import java.lang.reflect.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static utils.Console.leftpad;
+import static utils.Utils.leftpad;
+import static utils.Utils.join;
 
 public class Inspector {
 
@@ -98,8 +100,8 @@ public class Inspector {
             for (Method method : methods) {
                 leftpad("METHOD", indentation);
                 String name = method.getName();
-                String exceptions = Arrays.stream(method.getExceptionTypes()).map(Class::getSimpleName).collect(Collectors.joining(", "));
-                String paramTypes = Arrays.stream(method.getParameterTypes()).map(Class::getTypeName).collect(Collectors.joining(", "));
+                String exceptions = join(method.getExceptionTypes(), Class::getName);
+                String paramTypes = join(method.getParameterTypes(), Class::getTypeName);
                 String returnType = method.getReturnType().getName();
                 String modifier = Modifier.toString(method.getModifiers());
 
