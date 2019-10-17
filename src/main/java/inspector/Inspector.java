@@ -11,7 +11,14 @@ public class Inspector {
 
     public void inspect(Object obj, boolean recursive) {
         Class c = obj.getClass();
-        inspectClass(c, obj, recursive, 0);
+        int depth = 0;
+
+        if (c.isArray()) {
+            inspectArray(c, obj, recursive, depth);
+            return;
+        }
+
+        inspectClass(c, obj, recursive, depth);
     }
 
     private void inspectClass(Class aClass, Object obj, boolean recursive, int depth) {
