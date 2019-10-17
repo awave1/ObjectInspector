@@ -1,4 +1,5 @@
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.List;
@@ -21,6 +22,7 @@ public class Inspector {
         inspectSuperclass(aClass, obj, recursive, depth);
         inspectInterfaces(aClass, obj, recursive, depth);
         inspectConstructor(aClass, depth);
+        inspectMethods(aClass, depth);
 
         System.out.println();
     }
@@ -75,6 +77,35 @@ public class Inspector {
 
                 String modifier = Modifier.toString(constructor.getModifiers());
                 leftpad("modifiers: " + modifier, indentation + 1);
+            }
+        }
+    }
+
+    private void inspectMethods(Class c, int depth) {
+        List<Method> methods = Arrays.asList(c.getMethods());
+
+        int indentation = depth + 1;
+
+        if (!methods.isEmpty()) {
+            for (Method method : methods) {
+                leftpad("METHOD", indentation);
+                String name = method.getName();
+                String exceptions = Arrays.stream(method.getExceptionTypes()).map(Class::getSimpleName).collect(Collectors.joining(", "));
+                String paramTypes = Arrays.stream(method.getParameterTypes()).map(Class::getTypeName).collect(Collectors.joining(", "));
+                String returnType = method.getReturnType().getName();
+                String modifier = Modifier.toString(method.getModifiers());
+
+                leftpad("method: " + name, indentation + 1);
+                leftpad("returnType: " + returnType, indentation + 1);
+                leftpad("modifier: " + modifier, indentation + 1);
+
+                if (!exceptions.isEmpty()) {
+                    leftpad("exceptions: [" + exceptions + "]", indentation + 1);
+                }
+
+                if (!paramTypes.isEmpty()) {
+                    leftpad("parameterTypes: [" + paramTypes + "]", indentation + 1);
+                }
             }
         }
     }
