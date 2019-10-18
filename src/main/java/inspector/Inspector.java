@@ -2,6 +2,7 @@ package inspector;
 
 import java.lang.reflect.*;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -10,6 +11,8 @@ import static utils.Utils.leftpad;
 import static utils.Utils.join;
 
 public class Inspector {
+    private HashMap<String, Object> superclassObjects = new HashMap<>();
+    private HashMap<String, Object> classObjects = new HashMap<>();
 
     public void inspect(Object obj, boolean recursive) {
         Class c = obj.getClass();
@@ -48,6 +51,7 @@ public class Inspector {
             Class superclass = childClass.getSuperclass();
             String name = superclass.getName();
             leftpad("SUPERCLASS: " + name, indentation);
+            superclassObjects.put(name, superclass);
             inspectClass(superclass, obj, recursive, indentation + 1);
         }
     }
@@ -140,6 +144,7 @@ public class Inspector {
 
                 try {
                     Object valueObj = field.get(obj);
+                    classObjects.put(name, valueObj);
                     if (typeClass.isPrimitive()) {
                         leftpad("value: " + valueObj.toString(), indentation + 1);
                     } else if (typeClass.isArray()) {
@@ -189,5 +194,13 @@ public class Inspector {
             }
         }
         leftpad("]", length > 0 ? indentation : 0);
+    }
+
+    public HashMap<String, Object> getClassObjects() {
+        return classObjects;
+    }
+
+    public HashMap<String, Object> getSuperclassObjects() {
+        return superclassObjects;
     }
 }
