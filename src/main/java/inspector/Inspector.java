@@ -1,18 +1,33 @@
 package inspector;
 
 import java.lang.reflect.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static utils.Utils.leftpad;
 import static utils.Utils.join;
+import static utils.Utils.leftpad;
 
 public class Inspector {
     private HashMap<String, Object> superclassObjects = new HashMap<>();
     private HashMap<String, Object> classObjects = new HashMap<>();
+
+    // child: parent
+    public HashMap<Object, Object> recSuperclassObjects = new HashMap<>();
+
+    // class name: list of objects
+    public HashMap<String, ArrayList<Object>> recClassObjects = new HashMap<>();
+
+    // Class name: List of methods
+    public HashMap<String, ArrayList<Method>> objectMethods = new HashMap<>();
+
+    // Clas name: list of fields
+    public HashMap<String, ArrayList<Field>> objectFields = new HashMap<>();
+
+    // class name: list of constructors
+    public HashMap<String, ArrayList<Constructor>> objectConstructors = new HashMap<>();
 
     public void inspect(Object obj, boolean recursive) {
         Class c = obj.getClass();
@@ -52,6 +67,8 @@ public class Inspector {
             String name = superclass.getName();
             leftpad("SUPERCLASS: " + name, indentation);
             superclassObjects.put(name, superclass);
+
+            recSuperclassObjects.put(childClass, superclass);
             inspectClass(superclass, obj, recursive, indentation + 1);
         }
     }
@@ -78,6 +95,8 @@ public class Inspector {
         int indentation = depth + 1;
 
         if (constructors.length > 0) {
+            objectConstructors.put(c.getName(), (ArrayList<Constructor>) Arrays.asList(constructors));
+
             for (Constructor constructor : constructors) {
                 leftpad("CONSTRUCTOR", indentation);
                 leftpad("name: " + constructor.getName(), indentation + 1);
@@ -131,6 +150,7 @@ public class Inspector {
         int indentation = depth + 1;
 
         if (!fields.isEmpty()) {
+            String className = c.getName();
             for (Field field : fields) {
                 leftpad("FIELD", indentation);
                 field.setAccessible(true);
@@ -146,6 +166,14 @@ public class Inspector {
                 try {
                     Object valueObj = field.get(obj);
                     classObjects.put(name, valueObj);
+
+                    // TODO: Move to InspectorObject
+                    if (!recClassObjects.containsKey(className)) {
+                        recClassObjects.put(className, new ArrayList<Object>(){{ add(valueObj); }});
+                    } else {
+                        recClassObjects.get(className).add(valueObj);
+                    }
+
                     if (typeClass.isPrimitive()) {
                         leftpad("value: " + valueObj.toString(), indentation + 1);
                     } else if (typeClass.isArray()) {

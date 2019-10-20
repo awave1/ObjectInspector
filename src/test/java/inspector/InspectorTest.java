@@ -33,6 +33,27 @@ class InspectorTest {
     }
 
     @Test
+    void testInspectWithSimpleClass_withRecursion() {
+        SimpleClass simpleClass = new SimpleClass();
+
+        inspector.inspect(simpleClass, true);
+
+        HashMap<String, Object> objects = inspector.getClassObjects();
+        HashMap<String, Object> superclasses = inspector.getSuperclassObjects();
+
+        // TODO: Remove print statements.
+        //       or not.
+        System.out.println(superclasses);
+        System.out.println(objects);
+
+        assertEquals(1, superclasses.size());
+
+        assertEquals(2, objects.size());
+        assertNull(objects.get("dummy"));
+        assertNotNull(objects.get("notDummy"));
+    }
+
+    @Test
     void testInspectWithClassWithOneParent_noRecursion() {
         ClassWithOneParent classWithOneParent = new ClassWithOneParent();
 
@@ -52,5 +73,29 @@ class InspectorTest {
         assertEquals(2, objects.size());
         assertNull(objects.get("simpleDummy"));
         assertNotNull(objects.get("simpleNotDummy"));
+    }
+
+    @Test
+    void testInspectWithClassWithOneParent_withRecursion() {
+        ClassWithOneParent classWithOneParent = new ClassWithOneParent();
+
+        inspector.inspect(classWithOneParent, true);
+
+        HashMap<String, Object> objects = inspector.getClassObjects();
+        HashMap<String, Object> superclasses = inspector.getSuperclassObjects();
+
+        // TODO: Remove print statements.
+        //       or not.
+//        System.out.println(objects);
+//        System.out.println(superclasses);
+        System.out.println(inspector.recClassObjects);
+        System.out.println(inspector.recSuperclassObjects);
+
+//        assertEquals(2, superclasses.size());
+//        assertTrue(superclasses.containsKey("testclasses.ParentClass"));
+//
+//        assertEquals(4, objects.size());
+//        assertNull(objects.get("simpleDummy"));
+//        assertNotNull(objects.get("simpleNotDummy"));
     }
 }
