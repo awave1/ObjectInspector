@@ -56,7 +56,7 @@ public class Inspector {
             String name = superclass.getName();
             leftpad("SUPERCLASS: " + name, indentation);
 
-            inspectorResult.addSuperclass(superclass);
+            inspectorResult.addSuperclass(childClass.getName(), superclass);
             inspectClass(superclass, obj, recursive, indentation + 1);
         }
     }

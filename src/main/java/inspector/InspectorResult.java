@@ -31,8 +31,8 @@ public class InspectorResult {
         this.className = classToInspect.getName();
     }
 
-    public void addSuperclass(Class superclass) {
-        superclasses.put(className, superclass);
+    public void addSuperclass(String childClassName, Class superclass) {
+        superclasses.put(childClassName, superclass);
     }
 
     public void addInterfaces(ArrayList<Class> interfaceObjects) {
