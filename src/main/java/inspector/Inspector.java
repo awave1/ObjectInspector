@@ -66,7 +66,8 @@ public class Inspector {
                 leftpad("INTERFACE", indentation);
                 String name = i.getSimpleName();
                 leftpad("name: " + name, indentation + 1);
-                inspectClass(i, obj, recursive, indentation + 1);
+                inspectMethods(c, indentation + 1);
+                inspectFields(c, obj, recursive, indentation + 1);
             }
         }
     }
