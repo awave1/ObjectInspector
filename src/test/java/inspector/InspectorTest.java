@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import testclasses.ClassWithOneParent;
 import testclasses.SimpleClass;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,7 +19,7 @@ class InspectorTest {
 
         InspectorResult result = inspector.inspectObject(simpleClass, false);
 
-        HashMap<String, ArrayList<Object>> objects = result.getFields();
+        HashMap<String, ArrayList<Field>> objects = result.getFields();
         HashMap<String, Class> superclasses = result.getSuperclasses();
 
         System.out.println(superclasses);
@@ -27,8 +28,10 @@ class InspectorTest {
         assertEquals(1, superclasses.size());
         assertEquals(2, objects.get(result.getClassName()).size());
 
-        ArrayList<Object> objectFields = objects.get(result.getClassName());
-        assertTrue(objectFields.contains("dummy"));
-        assertTrue(objectFields.contains("notDummy"));
+        assertTrue(result.findField("dummy").isPresent());
+        assertNull(result.findField("dummy").get().value);
+
+        assertTrue(result.findField("notDummy").isPresent());
+        assertNotNull(result.findField("notDummy").get().value);
     }
 }

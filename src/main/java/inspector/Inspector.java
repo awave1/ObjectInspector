@@ -15,7 +15,7 @@ public class Inspector {
     public InspectorResult inspectObject(Object obj, boolean isRecursive) {
         Class c = obj.getClass();
         int depth = 0;
-        inspectorResult = new InspectorResult(c);
+        inspectorResult = new InspectorResult(obj);
 
         if (c.isArray()) {
             inspectArray(c, obj, isRecursive, depth);
@@ -142,7 +142,7 @@ public class Inspector {
         int indentation = depth + 1;
 
         if (!fields.isEmpty()) {
-            String className = c.getName();
+            inspectorResult.addFields(c.getName(), new ArrayList<Field>(fields));
             for (Field field : fields) {
                 leftpad("FIELD", indentation);
                 field.setAccessible(true);
@@ -157,8 +157,6 @@ public class Inspector {
 
                 try {
                     Object valueObj = field.get(obj);
-
-                    inspectorResult.addField(valueObj);
 
                     if (typeClass.isPrimitive()) {
                         leftpad("value: " + valueObj.toString(), indentation + 1);
