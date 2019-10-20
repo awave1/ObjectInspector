@@ -3,7 +3,6 @@ package inspector;
 import java.lang.reflect.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,34 +10,24 @@ import static utils.Utils.join;
 import static utils.Utils.leftpad;
 
 public class Inspector {
-    private HashMap<String, Object> superclassObjects = new HashMap<>();
-    private HashMap<String, Object> classObjects = new HashMap<>();
+    private InspectorResult inspectorResult;
 
-    // child: parent
-    public HashMap<Object, Object> recSuperclassObjects = new HashMap<>();
-
-    // class name: list of objects
-    public HashMap<String, ArrayList<Object>> recClassObjects = new HashMap<>();
-
-    // Class name: List of methods
-    public HashMap<String, ArrayList<Method>> objectMethods = new HashMap<>();
-
-    // Clas name: list of fields
-    public HashMap<String, ArrayList<Field>> objectFields = new HashMap<>();
-
-    // class name: list of constructors
-    public HashMap<String, ArrayList<Constructor>> objectConstructors = new HashMap<>();
-
-    public void inspect(Object obj, boolean recursive) {
+    public InspectorResult inspectObject(Object obj, boolean isRecursive) {
         Class c = obj.getClass();
         int depth = 0;
+        inspectorResult = new InspectorResult(c);
 
         if (c.isArray()) {
-            inspectArray(c, obj, recursive, depth);
-            return;
+            inspectArray(c, obj, isRecursive, depth);
+            return inspectorResult;
         }
 
-        inspectClass(c, obj, recursive, depth);
+        inspectClass(c, obj, isRecursive, depth);
+        return inspectorResult;
+    }
+
+    public void inspect(Object obj, boolean recursive) {
+        inspectObject(obj, recursive);
     }
 
     private void inspectClass(Class aClass, Object obj, boolean recursive, int depth) {
@@ -48,7 +37,7 @@ public class Inspector {
 
         inspectSuperclass(aClass, obj, recursive, depth);
         inspectInterfaces(aClass, obj, recursive, depth);
-        inspectConstructor(aClass, depth);
+        inspectConstructors(aClass, depth);
         inspectMethods(aClass, depth);
         inspectFields(aClass, obj, recursive, depth);
 
@@ -66,9 +55,8 @@ public class Inspector {
             Class superclass = childClass.getSuperclass();
             String name = superclass.getName();
             leftpad("SUPERCLASS: " + name, indentation);
-            superclassObjects.put(name, superclass);
 
-            recSuperclassObjects.put(childClass, superclass);
+            inspectorResult.addSuperclass(superclass);
             inspectClass(superclass, obj, recursive, indentation + 1);
         }
     }
@@ -79,6 +67,8 @@ public class Inspector {
         int indentation = depth + 1;
 
         if (!interfaces.isEmpty()) {
+            inspectorResult.addInterfaces(new ArrayList<>(interfaces));
+
             for (Class i : interfaces) {
                 leftpad("INTERFACE", indentation);
                 String name = i.getSimpleName();
@@ -89,13 +79,13 @@ public class Inspector {
         }
     }
 
-    private void inspectConstructor(Class c, int depth) {
-        Constructor[] constructors = c.getConstructors();
+    private void inspectConstructors(Class c, int depth) {
+        List<Constructor> constructors = Arrays.asList(c.getConstructors());
 
         int indentation = depth + 1;
 
-        if (constructors.length > 0) {
-            objectConstructors.put(c.getName(), (ArrayList<Constructor>) Arrays.asList(constructors));
+        if (!constructors.isEmpty()) {
+            inspectorResult.addConstructors(new ArrayList<>());
 
             for (Constructor constructor : constructors) {
                 leftpad("CONSTRUCTOR", indentation);
@@ -121,6 +111,8 @@ public class Inspector {
         int indentation = depth + 1;
 
         if (!methods.isEmpty()) {
+            inspectorResult.addMethods(new ArrayList<>(methods));
+
             for (Method method : methods) {
                 leftpad("METHOD", indentation);
                 String name = method.getName();
@@ -165,14 +157,8 @@ public class Inspector {
 
                 try {
                     Object valueObj = field.get(obj);
-                    classObjects.put(name, valueObj);
 
-                    // TODO: Move to InspectorObject
-                    if (!recClassObjects.containsKey(className)) {
-                        recClassObjects.put(className, new ArrayList<Object>(){{ add(valueObj); }});
-                    } else {
-                        recClassObjects.get(className).add(valueObj);
-                    }
+                    inspectorResult.addField(valueObj);
 
                     if (typeClass.isPrimitive()) {
                         leftpad("value: " + valueObj.toString(), indentation + 1);
@@ -207,29 +193,28 @@ public class Inspector {
         Class componentType = c.getComponentType();
 
         for (int i = 0; i < length; i++) {
-            Object o = Array.get(obj, i);
+            Object storedObj = Array.get(obj, i);
+
+            inspectorResult.addArray(storedObj);
+
             if (componentType.isPrimitive()) {
-                leftpad(o, indentation + 1);
+                leftpad(storedObj, indentation + 1);
             } else if (componentType.isArray()) {
-                inspectArray(o.getClass(), o, recursive, indentation + 1);
-            } else if (o == null) {
+                inspectArray(storedObj.getClass(), storedObj, recursive, indentation + 1);
+            } else if (storedObj == null) {
                 leftpad("null", indentation + 1);
             } else {
                 if (recursive) {
-                    inspectClass(o.getClass(), o, true, indentation + 1);
+                    inspectClass(storedObj.getClass(), storedObj, true, indentation + 1);
                 } else {
-                    leftpad("value: " + o.getClass().getName() + "@" + o.getClass().hashCode(), indentation + 1);
+                    leftpad("value: " + storedObj.getClass().getName() + "@" + storedObj.getClass().hashCode(), indentation + 1);
                 }
             }
         }
         leftpad("]", length > 0 ? indentation : 0);
     }
 
-    public HashMap<String, Object> getClassObjects() {
-        return classObjects;
-    }
-
-    public HashMap<String, Object> getSuperclassObjects() {
-        return superclassObjects;
+    public InspectorResult getInspectorResult() {
+        return inspectorResult;
     }
 }
