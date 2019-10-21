@@ -1,17 +1,14 @@
 package inspector;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.junit.jupiter.api.Test;
 import testclasses.ClassWithMethods;
 import testclasses.ClassWithOneParent;
-import testclasses.ParentClass;
 import testclasses.SimpleClass;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -111,6 +108,7 @@ class InspectorTest {
         InspectorResult result = inspector.inspectObject(classWithMethods, false);
 
         HashMap<String, ArrayList<Method>> methods = result.getMethods();
+        HashMap<String, ArrayList<Class>> interfaces = result.getInterfaces();
 
         ArrayList<Method> methodList = methods.get(classWithMethods.getClass().getName());
         ArrayList<String> actualMethodNames = new ArrayList<String>(){{
@@ -118,10 +116,38 @@ class InspectorTest {
             add("coolString");
             add("number");
             add("isFalse");
+            add("doStuff");
         }};
 
         for (Method m : methodList) {
             assertTrue(actualMethodNames.contains(m.getName()));
         }
+
+        assertFalse(interfaces.get(classWithMethods.getClass().getName()).isEmpty());
+    }
+
+    @Test
+    void testClassWithMethods_withRecursion() {
+        ClassWithMethods classWithMethods = new ClassWithMethods();
+        InspectorResult result = inspector.inspectObject(classWithMethods, true);
+
+        HashMap<String, ArrayList<Method>> methods = result.getMethods();
+        HashMap<String, ArrayList<Class>> interfaces = result.getInterfaces();
+
+        ArrayList<Method> methodList = methods.get(classWithMethods.getClass().getName());
+
+        ArrayList<String> actualMethodNames = new ArrayList<String>(){{
+            add("foo");
+            add("coolString");
+            add("number");
+            add("isFalse");
+            add("doStuff");
+        }};
+
+        for (Method m : methodList) {
+            assertTrue(actualMethodNames.contains(m.getName()));
+        }
+
+        assertFalse(interfaces.get(classWithMethods.getClass().getName()).isEmpty());
     }
 }

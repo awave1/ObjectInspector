@@ -1,6 +1,6 @@
 package testclasses;
 
-public class ClassWithMethods {
+public class ClassWithMethods implements SomeInterface {
     public void foo() {
         String bar = "bar";
     }
@@ -15,5 +15,10 @@ public class ClassWithMethods {
 
     boolean isFalse() {
         return true;
+    }
+
+    @Override
+    public void doStuff() {
+
     }
 }
