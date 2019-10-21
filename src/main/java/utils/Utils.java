@@ -7,12 +7,17 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Utils {
+    public static boolean enableOutput = true;
     public static void leftpad(Object o, int depth) {
-        leftpad(pad(String.valueOf(o), depth), depth, "\n");
+        if (enableOutput) {
+            leftpad(pad(String.valueOf(o), depth), depth, "\n");
+        }
     }
 
     public static void leftpad(Object o, int depth, String end) {
-        System.out.print(pad(String.valueOf(o), depth) + end);
+        if (enableOutput) {
+            System.out.print(pad(String.valueOf(o), depth) + end);
+        }
     }
 
     public static String pad(String string, int minLength) {

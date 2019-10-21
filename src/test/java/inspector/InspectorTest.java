@@ -1,5 +1,7 @@
 package inspector;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import testclasses.ClassWithMethods;
 import testclasses.ClassWithOneParent;
@@ -13,7 +15,17 @@ import java.util.HashMap;
 import static org.junit.jupiter.api.Assertions.*;
 
 class InspectorTest {
-    private Inspector inspector = new Inspector();
+    private static Inspector inspector = new Inspector();
+
+    @BeforeAll
+    static void beforeAll() {
+        inspector.setHasOutput(false);
+    }
+
+    @AfterAll
+    static void afterAll() {
+        inspector.setHasOutput(true);
+    }
 
     @Test
     void testInspectWithSimpleClass_noRecursion() {
@@ -23,9 +35,6 @@ class InspectorTest {
 
         HashMap<String, ArrayList<Field>> objects = result.getFields();
         HashMap<String, Class> superclasses = result.getSuperclasses();
-
-        System.out.println(superclasses);
-        System.out.println(objects);
 
         assertEquals(1, superclasses.size());
         assertEquals(4, objects.get(result.getClassName()).size());
@@ -88,8 +97,6 @@ class InspectorTest {
         InspectorResult result = inspector.inspectObject(classWithOneParent, true);
 
         HashMap<String, Class> superclasses = result.getSuperclasses();
-
-        System.out.println(superclasses);
 
         assertEquals(3, superclasses.size());
         assertEquals(

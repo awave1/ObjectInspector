@@ -1,5 +1,7 @@
 package inspector;
 
+import utils.Utils;
+
 import java.lang.reflect.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,7 +43,9 @@ public class Inspector {
         inspectMethods(aClass, depth);
         inspectFields(aClass, obj, recursive, depth);
 
-        System.out.println();
+        if (Utils.enableOutput) {
+            System.out.println();
+        }
     }
 
     private void inspectSuperclass(Class childClass, Object obj, boolean recursive, int depth) {
@@ -212,7 +216,7 @@ public class Inspector {
         leftpad("]", length > 0 ? indentation : 0);
     }
 
-    public InspectorResult getInspectorResult() {
-        return inspectorResult;
+    public void setHasOutput(boolean hasOutput) {
+        Utils.enableOutput = hasOutput;
     }
 }
