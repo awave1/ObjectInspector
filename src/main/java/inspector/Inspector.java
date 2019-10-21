@@ -106,7 +106,7 @@ public class Inspector {
     }
 
     private void inspectMethods(Class c, int depth) {
-        List<Method> methods = Arrays.asList(c.getMethods());
+        List<Method> methods = Arrays.asList(c.getDeclaredMethods());
 
         int indentation = depth + 1;
 
