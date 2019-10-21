@@ -1,5 +1,6 @@
 package inspector;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.junit.jupiter.api.Test;
 import testclasses.ClassWithOneParent;
 import testclasses.ParentClass;
@@ -27,7 +28,13 @@ class InspectorTest {
         System.out.println(objects);
 
         assertEquals(1, superclasses.size());
-        assertEquals(2, objects.get(result.getClassName()).size());
+        assertEquals(4, objects.get(result.getClassName()).size());
+
+        assertTrue(result.findField("number").isPresent());
+        assertEquals(result.findField("number").get().value, 0);
+
+        assertTrue(result.findField("aBoolean").isPresent());
+        assertFalse((Boolean) result.findField("aBoolean").get().value);
 
         assertTrue(result.findField("dummy").isPresent());
         assertNull(result.findField("dummy").get().value);
@@ -49,7 +56,13 @@ class InspectorTest {
         System.out.println(objects);
 
         assertEquals(1, superclasses.size());
-        assertEquals(2, objects.get(result.getClassName()).size());
+        assertEquals(4, objects.get(result.getClassName()).size());
+
+        assertTrue(result.findField("number").isPresent());
+        assertEquals(result.findField("number").get().value, 0);
+
+        assertTrue(result.findField("aBoolean").isPresent());
+        assertFalse((Boolean) result.findField("aBoolean").get().value);
 
         assertTrue(result.findField("dummy").isPresent());
         assertNull(result.findField("dummy").get().value);
@@ -70,6 +83,9 @@ class InspectorTest {
         System.out.println(objects);
 
         assertEquals(2, superclasses.size());
-        assertEquals(classWithOneParent.getClass().getSuperclass().getName(), superclasses.get(classWithOneParent.getClass().getName()).getName());
+        assertEquals(
+            classWithOneParent.getClass().getSuperclass().getName(),
+            superclasses.get(classWithOneParent.getClass().getName()).getName()
+        );
     }
 }
