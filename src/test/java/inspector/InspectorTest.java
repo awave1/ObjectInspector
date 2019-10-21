@@ -52,9 +52,6 @@ class InspectorTest {
         HashMap<String, ArrayList<Field>> objects = result.getFields();
         HashMap<String, Class> superclasses = result.getSuperclasses();
 
-        System.out.println(superclasses);
-        System.out.println(objects);
-
         assertEquals(1, superclasses.size());
         assertEquals(4, objects.get(result.getClassName()).size());
 
@@ -76,16 +73,32 @@ class InspectorTest {
         ClassWithOneParent classWithOneParent = new ClassWithOneParent();
         InspectorResult result = inspector.inspectObject(classWithOneParent, false);
 
-        HashMap<String, ArrayList<Field>> objects = result.getFields();
         HashMap<String, Class> superclasses = result.getSuperclasses();
-
-        System.out.println(superclasses);
-        System.out.println(objects);
 
         assertEquals(2, superclasses.size());
         assertEquals(
             classWithOneParent.getClass().getSuperclass().getName(),
             superclasses.get(classWithOneParent.getClass().getName()).getName()
+        );
+    }
+
+    @Test
+    void testClassWithOneParent_withRecursion() {
+        ClassWithOneParent classWithOneParent = new ClassWithOneParent();
+        InspectorResult result = inspector.inspectObject(classWithOneParent, true);
+
+        HashMap<String, Class> superclasses = result.getSuperclasses();
+
+        System.out.println(superclasses);
+
+        assertEquals(3, superclasses.size());
+        assertEquals(
+            classWithOneParent.getClass().getSuperclass().getName(),
+            superclasses.get(classWithOneParent.getClass().getName()).getName()
+        );
+        assertEquals(
+            superclasses.get(classWithOneParent.getClass().getName()).getSuperclass().getName(),
+            Object.class.getName()
         );
     }
 }
