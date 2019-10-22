@@ -39,7 +39,7 @@ public class InspectorResult {
         interfaces.put(className, interfaceObjects);
     }
 
-    public void addConstructors(ArrayList<Constructor> constructorObjects) {
+    public void addConstructors(String className, ArrayList<Constructor> constructorObjects) {
         constructors.put(className, constructorObjects);
     }
 

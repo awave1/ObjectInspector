@@ -80,7 +80,7 @@ public class Inspector {
     private void inspectConstructors(Class c, int depth) {
         List<Constructor> constructors = Arrays.asList(c.getConstructors());
         if (!constructors.isEmpty()) {
-            inspectorResult.addConstructors(new ArrayList<>());
+            inspectorResult.addConstructors(c.getName(), new ArrayList<>(constructors));
             indentOutput(depth, indentation -> {
                 for (Constructor constructor : constructors) {
                     leftpad("CONSTRUCTOR", indentation);

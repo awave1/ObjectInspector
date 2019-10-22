@@ -3,11 +3,13 @@ package inspector;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import testclasses.ClassWithConstructors;
 import testclasses.ClassWithMethods;
 import testclasses.ClassWithOneParent;
 import testclasses.SimpleClass;
 
 import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.*;
@@ -156,6 +158,33 @@ class InspectorTest {
         }
 
         assertFalse(interfaces.get(classWithMethods.getClass().getName()).isEmpty());
+    }
+
+    @Test
+    void testClassWithConstructors_noRecursion() {
+        ClassWithConstructors classWithConstructors = new ClassWithConstructors(42);
+        InspectorResult result = inspector.inspectObject(classWithConstructors, false);
+
+        HashMap<String, ArrayList<Constructor>> constructors = result.getConstructors();
+        ArrayList<Constructor> constructorList = constructors.get(classWithConstructors.getClass().getName());
+
+        assertFalse(constructorList.isEmpty());
+        assertEquals(2, constructorList.size());
+    }
+
+    @Test
+    void testClassWithConstructors_withRecursion() {
+        ClassWithConstructors classWithConstructors = new ClassWithConstructors(42);
+        InspectorResult result = inspector.inspectObject(classWithConstructors, true);
+
+        HashMap<String, ArrayList<Constructor>> constructors = result.getConstructors();
+        ArrayList<Constructor> constructorList = constructors.get(classWithConstructors.getClass().getName());
+        ArrayList<Constructor> parentConstructors = constructors.get(classWithConstructors.getClass().getSuperclass().getName());
+
+        assertFalse(constructorList.isEmpty());
+        assertFalse(parentConstructors.isEmpty());
+        assertEquals(2, constructorList.size());
+        assertEquals(2, parentConstructors.size());
     }
 
     @Test
