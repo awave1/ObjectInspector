@@ -7,7 +7,6 @@ import inspector.Inspector;
 import java.io.*;
 
 public class Driver {
-
     public static void main(String[] args) throws Exception {
         boolean isRecursive = args[0] == null || Boolean.parseBoolean(args[0]);
         boolean useStdOut = args[1] != null && Boolean.parseBoolean(args[1]);

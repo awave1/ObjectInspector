@@ -15,5 +15,4 @@ public class Console {
             System.out.print(pad(String.valueOf(o), depth) + end);
         }
     }
-
 }
