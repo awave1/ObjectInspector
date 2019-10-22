@@ -19,12 +19,8 @@ public class Inspector {
         int depth = 0;
         inspectorResult = new InspectorResult(obj);
 
-        if (c.isArray()) {
-            inspectArray(c, obj, isRecursive, depth);
-            return inspectorResult;
-        }
-
         inspectClass(c, obj, isRecursive, depth);
+
         return inspectorResult;
     }
 
@@ -42,6 +38,10 @@ public class Inspector {
         inspectConstructors(aClass, depth);
         inspectMethods(aClass, depth);
         inspectFields(aClass, obj, recursive, depth);
+
+        if (aClass.isArray()) {
+            inspectArray(aClass, obj, recursive, depth);
+        }
     }
 
     private void inspectSuperclass(Class childClass, Object obj, boolean recursive, int depth) {
