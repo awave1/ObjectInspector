@@ -1,6 +1,6 @@
 ======================================================
 Filename: script7.txt
-Running Test: [[Ldata.ClassB;@1fb3ebeb
+Running Test: [[Ldata.ClassB;@2f4d3709
 Recursive: true
 CLASS: ClassB[][]
   SUPERCLASS: java.lang.Object
@@ -16,15 +16,15 @@ CLASS: ClassB[][]
       METHOD
         method: wait
         returnType: void
-        modifier: public final native
-        exceptions: [java.lang.InterruptedException]
-        parameterTypes: [long]
-      METHOD
-        method: wait
-        returnType: void
         modifier: public final
         exceptions: [java.lang.InterruptedException]
         parameterTypes: [long, int]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final native
+        exceptions: [java.lang.InterruptedException]
+        parameterTypes: [long]
       METHOD
         method: wait
         returnType: void
@@ -53,6 +53,10 @@ CLASS: ClassB[][]
         modifier: protected native
         exceptions: [java.lang.CloneNotSupportedException]
       METHOD
+        method: registerNatives
+        returnType: void
+        modifier: private static native
+      METHOD
         method: notify
         returnType: void
         modifier: public final native
@@ -60,10 +64,6 @@ CLASS: ClassB[][]
         method: notifyAll
         returnType: void
         modifier: public final native
-      METHOD
-        method: registerNatives
-        returnType: void
-        modifier: private static native
   INTERFACE
     name: Cloneable
   INTERFACE

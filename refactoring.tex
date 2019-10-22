@@ -1,0 +1,81 @@
+% !TEX program = xelatex
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{SFNS Display}
+
+\usepackage{geometry}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{ltablex}
+
+\onehalfspacing
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=blue,
+  urlcolor=blue,
+]{hyperref}
+
+\usepackage{color}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{bg}{rgb}{0.96, 0.96, 0.96}
+
+\usepackage{listings}
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  stepnumber=1,
+  numbers=left,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{\$\$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%},
+  backgroundcolor = \color{bg}
+}
+
+\renewcommand{\b}[1]{\textbf{#1}}
+\renewcommand{\i}[1]{\textit{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\newcommand{\gh}[1]{%
+  \href{https://github.com/awave1/assessment-loan-system/commit/#1}{#1}%
+}
+
+\title{\b{CPSC 501 -- Assignment 2}}
+
+\author{\b{Artem Golovin} \\ 30018900}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+
+\code{ObjectInspector} uses reflection to inspect an object. It can inspect objects recursively. \code{Inspector} class lists all off th
+
+The project can also be found on \href{artem.golovin/ObjectInspector}{gitlab.cpsc.ucalgary.ca/artem.golovin/ObjectInspector}.
+%
+%  \subsection*{Refactoring structure}
+%
+%  The refactorings that were made in the project, can be categorized into three categories: \b{minor}, \b{medium} and \b{major}. \b{Minor} refactorings were usually made together with \b{major} and \b{minor} refactorings, thus no commits were directly dedicated to \b{minor} refactorings.
+
+\section*{Refactoring}
+
+\section*{Git Log}
+\input{log.tex}
+
+\end{document}

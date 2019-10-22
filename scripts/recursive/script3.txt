@@ -20,15 +20,15 @@ CLASS: ClassB
               METHOD
                 method: wait
                 returnType: void
-                modifier: public final native
-                exceptions: [java.lang.InterruptedException]
-                parameterTypes: [long]
-              METHOD
-                method: wait
-                returnType: void
                 modifier: public final
                 exceptions: [java.lang.InterruptedException]
                 parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
               METHOD
                 method: wait
                 returnType: void
@@ -57,6 +57,10 @@ CLASS: ClassB
                 modifier: protected native
                 exceptions: [java.lang.CloneNotSupportedException]
               METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+              METHOD
                 method: notify
                 returnType: void
                 modifier: public final native
@@ -64,10 +68,6 @@ CLASS: ClassB
                 method: notifyAll
                 returnType: void
                 modifier: public final native
-              METHOD
-                method: registerNatives
-                returnType: void
-                modifier: private static native
           CONSTRUCTOR
             name: data.ClassD
             modifiers: public
@@ -102,15 +102,15 @@ CLASS: ClassB
                   METHOD
                     method: wait
                     returnType: void
-                    modifier: public final native
-                    exceptions: [java.lang.InterruptedException]
-                    parameterTypes: [long]
-                  METHOD
-                    method: wait
-                    returnType: void
                     modifier: public final
                     exceptions: [java.lang.InterruptedException]
                     parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
                   METHOD
                     method: wait
                     returnType: void
@@ -139,6 +139,10 @@ CLASS: ClassB
                     modifier: protected native
                     exceptions: [java.lang.CloneNotSupportedException]
                   METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+                  METHOD
                     method: notify
                     returnType: void
                     modifier: public final native
@@ -146,10 +150,6 @@ CLASS: ClassB
                     method: notifyAll
                     returnType: void
                     modifier: public final native
-                  METHOD
-                    method: registerNatives
-                    returnType: void
-                    modifier: private static native
               INTERFACE
                 name: Serializable
                   METHOD
@@ -354,15 +354,15 @@ CLASS: ClassB
                   METHOD
                     method: wait
                     returnType: void
-                    modifier: public final native
-                    exceptions: [java.lang.InterruptedException]
-                    parameterTypes: [long]
-                  METHOD
-                    method: wait
-                    returnType: void
                     modifier: public final
                     exceptions: [java.lang.InterruptedException]
                     parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
                   METHOD
                     method: wait
                     returnType: void
@@ -391,6 +391,10 @@ CLASS: ClassB
                     modifier: protected native
                     exceptions: [java.lang.CloneNotSupportedException]
                   METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+                  METHOD
                     method: notify
                     returnType: void
                     modifier: public final native
@@ -398,10 +402,6 @@ CLASS: ClassB
                     method: notifyAll
                     returnType: void
                     modifier: public final native
-                  METHOD
-                    method: registerNatives
-                    returnType: void
-                    modifier: private static native
               INTERFACE
                 name: Serializable
                   METHOD
@@ -543,15 +543,15 @@ CLASS: ClassB
                   METHOD
                     method: wait
                     returnType: void
-                    modifier: public final native
-                    exceptions: [java.lang.InterruptedException]
-                    parameterTypes: [long]
-                  METHOD
-                    method: wait
-                    returnType: void
                     modifier: public final
                     exceptions: [java.lang.InterruptedException]
                     parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
                   METHOD
                     method: wait
                     returnType: void
@@ -580,6 +580,10 @@ CLASS: ClassB
                     modifier: protected native
                     exceptions: [java.lang.CloneNotSupportedException]
                   METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+                  METHOD
                     method: notify
                     returnType: void
                     modifier: public final native
@@ -587,10 +591,6 @@ CLASS: ClassB
                     method: notifyAll
                     returnType: void
                     modifier: public final native
-                  METHOD
-                    method: registerNatives
-                    returnType: void
-                    modifier: private static native
               INTERFACE
                 name: Serializable
                   METHOD
@@ -732,15 +732,15 @@ CLASS: ClassB
                   METHOD
                     method: wait
                     returnType: void
-                    modifier: public final native
-                    exceptions: [java.lang.InterruptedException]
-                    parameterTypes: [long]
-                  METHOD
-                    method: wait
-                    returnType: void
                     modifier: public final
                     exceptions: [java.lang.InterruptedException]
                     parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
                   METHOD
                     method: wait
                     returnType: void
@@ -769,6 +769,10 @@ CLASS: ClassB
                     modifier: protected native
                     exceptions: [java.lang.CloneNotSupportedException]
                   METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+                  METHOD
                     method: notify
                     returnType: void
                     modifier: public final native
@@ -776,10 +780,6 @@ CLASS: ClassB
                     method: notifyAll
                     returnType: void
                     modifier: public final native
-                  METHOD
-                    method: registerNatives
-                    returnType: void
-                    modifier: private static native
               INTERFACE
                 name: Serializable
                   METHOD
@@ -959,15 +959,15 @@ CLASS: ClassB
               METHOD
                 method: wait
                 returnType: void
-                modifier: public final native
-                exceptions: [java.lang.InterruptedException]
-                parameterTypes: [long]
-              METHOD
-                method: wait
-                returnType: void
                 modifier: public final
                 exceptions: [java.lang.InterruptedException]
                 parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
               METHOD
                 method: wait
                 returnType: void
@@ -996,6 +996,10 @@ CLASS: ClassB
                 modifier: protected native
                 exceptions: [java.lang.CloneNotSupportedException]
               METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+              METHOD
                 method: notify
                 returnType: void
                 modifier: public final native
@@ -1003,10 +1007,6 @@ CLASS: ClassB
                 method: notifyAll
                 returnType: void
                 modifier: public final native
-              METHOD
-                method: registerNatives
-                returnType: void
-                modifier: private static native
           INTERFACE
             name: Serializable
               METHOD
@@ -1148,15 +1148,15 @@ CLASS: ClassB
               METHOD
                 method: wait
                 returnType: void
-                modifier: public final native
-                exceptions: [java.lang.InterruptedException]
-                parameterTypes: [long]
-              METHOD
-                method: wait
-                returnType: void
                 modifier: public final
                 exceptions: [java.lang.InterruptedException]
                 parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
               METHOD
                 method: wait
                 returnType: void
@@ -1185,6 +1185,10 @@ CLASS: ClassB
                 modifier: protected native
                 exceptions: [java.lang.CloneNotSupportedException]
               METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+              METHOD
                 method: notify
                 returnType: void
                 modifier: public final native
@@ -1192,10 +1196,6 @@ CLASS: ClassB
                 method: notifyAll
                 returnType: void
                 modifier: public final native
-              METHOD
-                method: registerNatives
-                returnType: void
-                modifier: private static native
           INTERFACE
             name: Serializable
               METHOD
@@ -1337,15 +1337,15 @@ CLASS: ClassB
               METHOD
                 method: wait
                 returnType: void
-                modifier: public final native
-                exceptions: [java.lang.InterruptedException]
-                parameterTypes: [long]
-              METHOD
-                method: wait
-                returnType: void
                 modifier: public final
                 exceptions: [java.lang.InterruptedException]
                 parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
               METHOD
                 method: wait
                 returnType: void
@@ -1374,6 +1374,10 @@ CLASS: ClassB
                 modifier: protected native
                 exceptions: [java.lang.CloneNotSupportedException]
               METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+              METHOD
                 method: notify
                 returnType: void
                 modifier: public final native
@@ -1381,10 +1385,6 @@ CLASS: ClassB
                 method: notifyAll
                 returnType: void
                 modifier: public final native
-              METHOD
-                method: registerNatives
-                returnType: void
-                modifier: private static native
           INTERFACE
             name: Serializable
               METHOD
@@ -1541,15 +1541,15 @@ CLASS: ClassB
               METHOD
                 method: wait
                 returnType: void
-                modifier: public final native
-                exceptions: [java.lang.InterruptedException]
-                parameterTypes: [long]
-              METHOD
-                method: wait
-                returnType: void
                 modifier: public final
                 exceptions: [java.lang.InterruptedException]
                 parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
               METHOD
                 method: wait
                 returnType: void
@@ -1578,6 +1578,10 @@ CLASS: ClassB
                 modifier: protected native
                 exceptions: [java.lang.CloneNotSupportedException]
               METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+              METHOD
                 method: notify
                 returnType: void
                 modifier: public final native
@@ -1585,10 +1589,6 @@ CLASS: ClassB
                 method: notifyAll
                 returnType: void
                 modifier: public final native
-              METHOD
-                method: registerNatives
-                returnType: void
-                modifier: private static native
           INTERFACE
             name: Serializable
               METHOD
@@ -1730,15 +1730,15 @@ CLASS: ClassB
               METHOD
                 method: wait
                 returnType: void
-                modifier: public final native
-                exceptions: [java.lang.InterruptedException]
-                parameterTypes: [long]
-              METHOD
-                method: wait
-                returnType: void
                 modifier: public final
                 exceptions: [java.lang.InterruptedException]
                 parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
               METHOD
                 method: wait
                 returnType: void
@@ -1767,6 +1767,10 @@ CLASS: ClassB
                 modifier: protected native
                 exceptions: [java.lang.CloneNotSupportedException]
               METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+              METHOD
                 method: notify
                 returnType: void
                 modifier: public final native
@@ -1774,10 +1778,6 @@ CLASS: ClassB
                 method: notifyAll
                 returnType: void
                 modifier: public final native
-              METHOD
-                method: registerNatives
-                returnType: void
-                modifier: private static native
           INTERFACE
             name: Serializable
               METHOD
@@ -1940,15 +1940,15 @@ CLASS: ClassB
           METHOD
             method: wait
             returnType: void
-            modifier: public final native
-            exceptions: [java.lang.InterruptedException]
-            parameterTypes: [long]
-          METHOD
-            method: wait
-            returnType: void
             modifier: public final
             exceptions: [java.lang.InterruptedException]
             parameterTypes: [long, int]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final native
+            exceptions: [java.lang.InterruptedException]
+            parameterTypes: [long]
           METHOD
             method: wait
             returnType: void
@@ -1977,6 +1977,10 @@ CLASS: ClassB
             modifier: protected native
             exceptions: [java.lang.CloneNotSupportedException]
           METHOD
+            method: registerNatives
+            returnType: void
+            modifier: private static native
+          METHOD
             method: notify
             returnType: void
             modifier: public final native
@@ -1984,10 +1988,6 @@ CLASS: ClassB
             method: notifyAll
             returnType: void
             modifier: public final native
-          METHOD
-            method: registerNatives
-            returnType: void
-            modifier: private static native
       INTERFACE
         name: Serializable
           METHOD
@@ -2129,15 +2129,15 @@ CLASS: ClassB
           METHOD
             method: wait
             returnType: void
-            modifier: public final native
-            exceptions: [java.lang.InterruptedException]
-            parameterTypes: [long]
-          METHOD
-            method: wait
-            returnType: void
             modifier: public final
             exceptions: [java.lang.InterruptedException]
             parameterTypes: [long, int]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final native
+            exceptions: [java.lang.InterruptedException]
+            parameterTypes: [long]
           METHOD
             method: wait
             returnType: void
@@ -2166,6 +2166,10 @@ CLASS: ClassB
             modifier: protected native
             exceptions: [java.lang.CloneNotSupportedException]
           METHOD
+            method: registerNatives
+            returnType: void
+            modifier: private static native
+          METHOD
             method: notify
             returnType: void
             modifier: public final native
@@ -2173,10 +2177,6 @@ CLASS: ClassB
             method: notifyAll
             returnType: void
             modifier: public final native
-          METHOD
-            method: registerNatives
-            returnType: void
-            modifier: private static native
       INTERFACE
         name: Serializable
           METHOD
