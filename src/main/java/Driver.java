@@ -9,8 +9,8 @@ import java.io.*;
 public class Driver {
 
     public static void main(String[] args) throws Exception {
-        boolean isRecursive = true;
-        boolean useStdOut = true;
+        boolean isRecursive = args[0] == null || Boolean.parseBoolean(args[0]);
+        boolean useStdOut = args[1] != null && Boolean.parseBoolean(args[1]);
 
         runTest("script1.txt", new ClassA(), isRecursive, useStdOut);
         runTest("script2.txt", new ClassA(12), isRecursive, useStdOut);
