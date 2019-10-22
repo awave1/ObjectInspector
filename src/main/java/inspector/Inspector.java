@@ -1,6 +1,6 @@
 package inspector;
 
-import utils.Utils;
+import utils.Console;
 
 import java.lang.reflect.*;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static utils.Utils.join;
-import static utils.Utils.leftpad;
+import static utils.Console.leftpad;
 
 public class Inspector {
     private InspectorResult inspectorResult;
@@ -209,6 +209,6 @@ public class Inspector {
     }
 
     public void setHasOutput(boolean hasOutput) {
-        Utils.enableOutput = hasOutput;
+        Console.enableOutput = hasOutput;
     }
 }

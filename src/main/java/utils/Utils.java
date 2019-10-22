@@ -7,19 +7,6 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Utils {
-    public static boolean enableOutput = true;
-    public static void leftpad(Object o, int depth) {
-        if (enableOutput) {
-            leftpad(String.valueOf(o), depth, "\n");
-        }
-    }
-
-    public static void leftpad(Object o, int depth, String end) {
-        if (enableOutput) {
-            System.out.print(pad(String.valueOf(o), depth) + end);
-        }
-    }
-
     public static String pad(String string, int minLength) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < minLength; i++) {
