@@ -10,7 +10,7 @@ public class Utils {
     public static boolean enableOutput = true;
     public static void leftpad(Object o, int depth) {
         if (enableOutput) {
-            leftpad(pad(String.valueOf(o), depth), depth, "\n");
+            leftpad(String.valueOf(o), depth, "\n");
         }
     }
 

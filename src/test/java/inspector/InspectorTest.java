@@ -7,10 +7,10 @@ import testclasses.ClassWithMethods;
 import testclasses.ClassWithOneParent;
 import testclasses.SimpleClass;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,7 +19,7 @@ class InspectorTest {
 
     @BeforeAll
     static void beforeAll() {
-        inspector.setHasOutput(false);
+        inspector.setHasOutput(true);
     }
 
     @AfterAll
@@ -156,5 +156,46 @@ class InspectorTest {
         }
 
         assertFalse(interfaces.get(classWithMethods.getClass().getName()).isEmpty());
+    }
+
+    @Test
+    void testPrimitiveArray() {
+        int[] arr = new int[]{ 1, 2, 3, 4, 5 };
+        InspectorResult result = inspector.inspectObject(arr, false);
+        assertArrays(arr, result);
+    }
+
+    @Test
+    void testObjectArray_noRecursion() {
+        String[] arr = new String[]{ "list", "of", "strings" };
+        InspectorResult result = inspector.inspectObject(arr, false);
+        assertArrays(arr, result);
+    }
+
+    @Test
+    void testObjectArray_withRecursion() {
+        inspector.setHasOutput(true);
+
+        SimpleClass[] arr = new SimpleClass[]{
+            new SimpleClass(),
+            new SimpleClass(),
+            new SimpleClass()
+        };
+        InspectorResult result = inspector.inspectObject(arr, true);
+        assertArrays(arr, result);
+
+        inspector.setHasOutput(false);
+    }
+
+    private static void assertArrays(Object arr, InspectorResult result) {
+        HashMap<String, ArrayList<Object>> arrays = result.getArrays();
+
+        for (Map.Entry<String, ArrayList<Object>> entry : arrays.entrySet()) {
+            assertEquals(Array.getLength(arr), entry.getValue().size());
+
+            for (int i = 0; i < Array.getLength(arr); i++) {
+                assertEquals(Array.get(arr, i), entry.getValue().get(i));
+            }
+        }
     }
 }

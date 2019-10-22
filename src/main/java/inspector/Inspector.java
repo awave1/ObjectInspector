@@ -42,10 +42,6 @@ public class Inspector {
         inspectConstructors(aClass, depth);
         inspectMethods(aClass, depth);
         inspectFields(aClass, obj, recursive, depth);
-
-        if (Utils.enableOutput) {
-            System.out.println();
-        }
     }
 
     private void inspectSuperclass(Class childClass, Object obj, boolean recursive, int depth) {
@@ -53,7 +49,7 @@ public class Inspector {
             return;
         }
 
-        int indentation = depth + 1;
+        int indentation = depth + 2;
 
         if (childClass.getSuperclass() != null) {
             Class superclass = childClass.getSuperclass();
@@ -61,14 +57,14 @@ public class Inspector {
             leftpad("SUPERCLASS: " + name, indentation);
 
             inspectorResult.addSuperclass(childClass.getName(), superclass);
-            inspectClass(superclass, obj, recursive, indentation + 1);
+            inspectClass(superclass, obj, recursive, indentation + 2);
         }
     }
 
     private void inspectInterfaces(Class c, Object obj, boolean recursive, int depth) {
         List<Class> interfaces = Arrays.asList(c.getInterfaces());
 
-        int indentation = depth + 1;
+        int indentation = depth + 2;
 
         if (!interfaces.isEmpty()) {
             inspectorResult.addInterfaces(new ArrayList<>(interfaces));
@@ -76,9 +72,9 @@ public class Inspector {
             for (Class i : interfaces) {
                 leftpad("INTERFACE", indentation);
                 String name = i.getSimpleName();
-                leftpad("name: " + name, indentation + 1);
-                inspectMethods(c, indentation + 1);
-                inspectFields(c, obj, recursive, indentation + 1);
+                leftpad("name: " + name, indentation + 2);
+                inspectMethods(c, indentation + 2);
+                inspectFields(c, obj, recursive, indentation + 2);
             }
         }
     }
@@ -86,25 +82,25 @@ public class Inspector {
     private void inspectConstructors(Class c, int depth) {
         List<Constructor> constructors = Arrays.asList(c.getConstructors());
 
-        int indentation = depth + 1;
+        int indentation = depth + 2;
 
         if (!constructors.isEmpty()) {
             inspectorResult.addConstructors(new ArrayList<>());
 
             for (Constructor constructor : constructors) {
                 leftpad("CONSTRUCTOR", indentation);
-                leftpad("name: " + constructor.getName(), indentation + 1);
+                leftpad("name: " + constructor.getName(), indentation + 2);
 
                 String params = Arrays.stream(constructor.getParameterTypes())
                     .map(Class::getTypeName)
                     .collect(Collectors.joining(", "));
 
                 if (!params.isEmpty()) {
-                    leftpad("parameters: [" + params + "]", indentation + 1);
+                    leftpad("parameters: [" + params + "]", indentation + 2);
                 }
 
                 String modifier = Modifier.toString(constructor.getModifiers());
-                leftpad("modifiers: " + modifier, indentation + 1);
+                leftpad("modifiers: " + modifier, indentation + 2);
             }
         }
     }
@@ -112,7 +108,7 @@ public class Inspector {
     private void inspectMethods(Class c, int depth) {
         List<Method> methods = Arrays.asList(c.getDeclaredMethods());
 
-        int indentation = depth + 1;
+        int indentation = depth + 2;
 
         if (!methods.isEmpty()) {
             inspectorResult.addMethods(new ArrayList<>(methods));
@@ -125,16 +121,16 @@ public class Inspector {
                 String returnType = method.getReturnType().getName();
                 String modifier = Modifier.toString(method.getModifiers());
 
-                leftpad("method: " + name, indentation + 1);
-                leftpad("returnType: " + returnType, indentation + 1);
-                leftpad("modifier: " + modifier, indentation + 1);
+                leftpad("method: " + name, indentation + 2);
+                leftpad("returnType: " + returnType, indentation + 2);
+                leftpad("modifier: " + modifier, indentation + 2);
 
                 if (!exceptions.isEmpty()) {
-                    leftpad("exceptions: [" + exceptions + "]", indentation + 1);
+                    leftpad("exceptions: [" + exceptions + "]", indentation + 2);
                 }
 
                 if (!paramTypes.isEmpty()) {
-                    leftpad("parameterTypes: [" + paramTypes + "]", indentation + 1);
+                    leftpad("parameterTypes: [" + paramTypes + "]", indentation + 2);
                 }
             }
         }
@@ -143,7 +139,7 @@ public class Inspector {
     private void inspectFields(Class c, Object obj, boolean recursive, int depth) {
         List<Field> fields = Arrays.asList(c.getDeclaredFields());
 
-        int indentation = depth + 1;
+        int indentation = depth + 2;
 
         if (!fields.isEmpty()) {
             inspectorResult.addFields(c.getName(), new ArrayList<Field>(fields));
@@ -155,28 +151,13 @@ public class Inspector {
                 Class typeClass = field.getType();
                 String modifiers = Modifier.toString(field.getModifiers());
 
-                leftpad("name: " + name, indentation + 1);
-                leftpad("type: " + typeClass.getSimpleName(), indentation + 1);
-                leftpad("modifiers: " + modifiers, indentation + 1);
+                leftpad("name: " + name, indentation + 2);
+                leftpad("type: " + typeClass.getSimpleName(), indentation + 2);
+                leftpad("modifiers: " + modifiers, indentation + 2);
 
                 try {
                     Object valueObj = field.get(obj);
-
-                    if (typeClass.isPrimitive()) {
-                        leftpad("value: " + valueObj.toString(), indentation + 1);
-                    } else if (typeClass.isArray()) {
-                        leftpad("value: ", indentation + 1);
-                        inspectArray(typeClass, valueObj, recursive, indentation + 2);
-                    } else if (valueObj == null) {
-                        leftpad("value: null", indentation + 1);
-                    } else {
-                        if (!recursive) {
-                            leftpad("referenceValue: " + valueObj.getClass().getName() + "@" + valueObj.getClass().hashCode(), indentation + 1);
-                        } else {
-                            leftpad("value: ", indentation + 1);
-                            inspectClass(typeClass, valueObj, true, indentation + 2);
-                        }
-                    }
+                    inspectValues(typeClass, valueObj, indentation, recursive);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
@@ -188,32 +169,43 @@ public class Inspector {
     private void inspectArray(Class c, Object obj, boolean recursive, int depth) {
         int length = Array.getLength(obj);
 
-        int indentation = depth + 1;
-
-        leftpad("Array: [", indentation, length > 0 ? "\n" : "");
+        int indentation = depth + 2;
 
         Class componentType = c.getComponentType();
 
-        for (int i = 0; i < length; i++) {
-            Object storedObj = Array.get(obj, i);
+        leftpad("ARRAY", indentation);
+        leftpad("componentType: " + componentType.getName(), indentation + 2);
+        leftpad("length: " + length, indentation + 2);
+        leftpad("contents: [", indentation + 2, length > 0 ? "\n" : "");
 
-            inspectorResult.addArray(storedObj);
-
-            if (componentType.isPrimitive()) {
-                leftpad(storedObj, indentation + 1);
-            } else if (componentType.isArray()) {
-                inspectArray(storedObj.getClass(), storedObj, recursive, indentation + 1);
-            } else if (storedObj == null) {
-                leftpad("null", indentation + 1);
-            } else {
-                if (recursive) {
-                    inspectClass(storedObj.getClass(), storedObj, true, indentation + 1);
-                } else {
-                    leftpad("value: " + storedObj.getClass().getName() + "@" + storedObj.getClass().hashCode(), indentation + 1);
-                }
-            }
+        for (int i = 0; i < Array.getLength(obj); i++) {
+            Object element = Array.get(obj, i);
+            inspectorResult.addArray(element);
+            inspectValues(componentType, element, indentation + 2, recursive);
         }
         leftpad("]", length > 0 ? indentation : 0);
+    }
+
+    private void inspectValues(Class valueClass, Object valueObject, int indentation, boolean recursive) {
+        if (valueClass.isPrimitive()) {
+            leftpad("value: " + valueObject.toString(), indentation + 2);
+        } else if (valueClass.isArray()) {
+            leftpad("value: ", indentation + 2);
+            inspectArray(valueClass, valueObject, recursive, indentation + 2);
+        } else if (valueObject == null) {
+            leftpad("value: null", indentation + 2);
+        } else {
+            if (!recursive) {
+                leftpad("referenceValue: " + getReferenceFormat(valueObject), indentation + 2);
+            } else {
+                leftpad("value: ", indentation + 2);
+                inspectClass(valueObject.getClass(), valueObject, true, indentation + 2);
+            }
+        }
+    }
+
+    private String getReferenceFormat(Object o) {
+        return o.getClass().getName() + "@" + Integer.toHexString(System.identityHashCode(o));
     }
 
     public void setHasOutput(boolean hasOutput) {

@@ -9,17 +9,17 @@ import java.io.*;
 public class Driver {
 
     public static void main(String[] args) throws Exception {
-        boolean isRecursive = args[0] != null && Boolean.parseBoolean(args[0]);
-        boolean useStdOut = args[1] != null && Boolean.parseBoolean(args[1]);
+        boolean isRecursive = true;
+        boolean useStdOut = true;
 
         runTest("script1.txt", new ClassA(), isRecursive, useStdOut);
-        runTest("script2.txt", new ClassA(12), isRecursive, useStdOut);
-        runTest("script3.txt", new ClassB(), isRecursive, useStdOut);
-        runTest("script4.txt", new ClassD(32), isRecursive, useStdOut);
-        runTest("script5.txt", new ClassD(), isRecursive, useStdOut);
-        runTest("script6.txt", new ClassB[12], isRecursive, useStdOut);
-        runTest("script7.txt", new ClassB[12][12], isRecursive, useStdOut);
-        runTest("script8.txt", "Test String", isRecursive, useStdOut);
+//        runTest("script2.txt", new ClassA(12), isRecursive, useStdOut);
+//        runTest("script3.txt", new ClassB(), isRecursive, useStdOut);
+//        runTest("script4.txt", new ClassD(32), isRecursive, useStdOut);
+//        runTest("script5.txt", new ClassD(), isRecursive, useStdOut);
+//        runTest("script6.txt", new ClassB[12], isRecursive, useStdOut);
+//        runTest("script7.txt", new ClassB[12][12], isRecursive, useStdOut);
+//        runTest("script8.txt", "Test String", isRecursive, useStdOut);
     }
 
     private static void runTest(String filename, Object testObj, boolean recursive, boolean useStdOut) {
