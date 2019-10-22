@@ -21,7 +21,7 @@ class InspectorTest {
 
     @BeforeAll
     static void beforeAll() {
-        inspector.setHasOutput(true);
+        inspector.setHasOutput(false);
     }
 
     @AfterAll
@@ -203,8 +203,6 @@ class InspectorTest {
 
     @Test
     void testObjectArray_withRecursion() {
-        inspector.setHasOutput(true);
-
         SimpleClass[] arr = new SimpleClass[]{
             new SimpleClass(),
             new SimpleClass(),
@@ -212,8 +210,6 @@ class InspectorTest {
         };
         InspectorResult result = inspector.inspectObject(arr, true);
         assertArrays(arr, result);
-
-        inspector.setHasOutput(false);
     }
 
     private static void assertArrays(Object arr, InspectorResult result) {
