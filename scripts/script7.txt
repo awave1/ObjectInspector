@@ -1,0 +1,292 @@
+======================================================
+Filename: script7.txt
+Running Test: [[Ldata.ClassB;@e9e54c2
+Recursive: false
+CLASS: ClassB[][]
+  SUPERCLASS: java.lang.Object
+    CLASS: Object
+      CONSTRUCTOR
+        name: java.lang.Object
+        modifiers: public
+      METHOD
+        method: finalize
+        returnType: void
+        modifier: protected
+        exceptions: [java.lang.Throwable]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final native
+        exceptions: [java.lang.InterruptedException]
+        parameterTypes: [long]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final
+        exceptions: [java.lang.InterruptedException]
+        parameterTypes: [long, int]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final
+        exceptions: [java.lang.InterruptedException]
+      METHOD
+        method: equals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: hashCode
+        returnType: int
+        modifier: public native
+      METHOD
+        method: getClass
+        returnType: java.lang.Class
+        modifier: public final native
+      METHOD
+        method: clone
+        returnType: java.lang.Object
+        modifier: protected native
+        exceptions: [java.lang.CloneNotSupportedException]
+      METHOD
+        method: notify
+        returnType: void
+        modifier: public final native
+      METHOD
+        method: notifyAll
+        returnType: void
+        modifier: public final native
+      METHOD
+        method: registerNatives
+        returnType: void
+        modifier: private static native
+  INTERFACE
+    name: Cloneable
+  INTERFACE
+    name: Serializable
+  ARRAY
+    componentType: [Ldata.ClassB;
+    length: 12
+    contents: [
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+      value: 
+        ARRAY
+          componentType: data.ClassB
+          length: 12
+          contents: [
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+            value: null
+        ]
+  ]
+======================================================

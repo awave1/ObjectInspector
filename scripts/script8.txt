@@ -1,0 +1,3538 @@
+======================================================
+Filename: script8.txt
+Running Test: Test String
+Recursive: false
+CLASS: String
+  SUPERCLASS: java.lang.Object
+    CLASS: Object
+      CONSTRUCTOR
+        name: java.lang.Object
+        modifiers: public
+      METHOD
+        method: finalize
+        returnType: void
+        modifier: protected
+        exceptions: [java.lang.Throwable]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final native
+        exceptions: [java.lang.InterruptedException]
+        parameterTypes: [long]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final
+        exceptions: [java.lang.InterruptedException]
+        parameterTypes: [long, int]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final
+        exceptions: [java.lang.InterruptedException]
+      METHOD
+        method: equals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: hashCode
+        returnType: int
+        modifier: public native
+      METHOD
+        method: getClass
+        returnType: java.lang.Class
+        modifier: public final native
+      METHOD
+        method: clone
+        returnType: java.lang.Object
+        modifier: protected native
+        exceptions: [java.lang.CloneNotSupportedException]
+      METHOD
+        method: notify
+        returnType: void
+        modifier: public final native
+      METHOD
+        method: notifyAll
+        returnType: void
+        modifier: public final native
+      METHOD
+        method: registerNatives
+        returnType: void
+        modifier: private static native
+  INTERFACE
+    name: Serializable
+      METHOD
+        method: value
+        returnType: [B
+        modifier: 
+      METHOD
+        method: equals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: length
+        returnType: int
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: hashCode
+        returnType: int
+        modifier: public
+      METHOD
+        method: getChars
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, char[], int]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public volatile
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: checkIndex
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [long]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [double]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [float]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [boolean]
+      METHOD
+        method: coder
+        returnType: byte
+        modifier: 
+      METHOD
+        method: rangeCheck
+        returnType: java.lang.Void
+        modifier: private static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: checkBoundsOffCount
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: isLatin1
+        returnType: boolean
+        modifier: 
+      METHOD
+        method: charAt
+        returnType: char
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointAt
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointBefore
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointCount
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: offsetByCodePoints
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: checkBoundsBeginEnd
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        exceptions: [java.io.UnsupportedEncodingException]
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: 
+        parameterTypes: [byte[], int, byte]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, byte[], int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        parameterTypes: [java.nio.charset.Charset]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.StringBuffer]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: nonSyncContentEquals
+        returnType: boolean
+        modifier: private
+        parameterTypes: [java.lang.AbstractStringBuilder]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [int, java.lang.String, int, int]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [boolean, int, java.lang.String, int, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: isEmpty
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [char, char]
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence]
+      METHOD
+        method: matches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: replaceFirst
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: replaceAll
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: trim
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: strip
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripLeading
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripTrailing
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: indexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: lines
+        returnType: java.util.stream.Stream
+        modifier: public
+      METHOD
+        method: repeat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: outdent
+        returnType: int
+        modifier: private static
+        parameterTypes: [java.util.List]
+      METHOD
+        method: isBlank
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: toCharArray
+        returnType: [C
+        modifier: public
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.util.Locale, java.lang.String, java.lang.Object[]]
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.String, java.lang.Object[]]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.Object
+        modifier: public volatile
+        exceptions: [java.lang.ReflectiveOperationException]
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: codePoints
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: equalsIgnoreCase
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: compareToIgnoreCase
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: endsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: subSequence
+        returnType: java.lang.CharSequence
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: concat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: contains
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence[]]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.CharSequence, java.lang.Iterable]
+      METHOD
+        method: indent
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: stripIndent
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: translateEscapes
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: chars
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: transform
+        returnType: java.lang.Object
+        modifier: public
+        parameterTypes: [java.util.function.Function]
+      METHOD
+        method: formatted
+        returnType: java.lang.String
+        modifier: public transient
+        parameterTypes: [java.lang.Object[]]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: intern
+        returnType: java.lang.String
+        modifier: public native
+      METHOD
+        method: checkOffset
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOfCodePoint
+        returnType: java.lang.String
+        modifier: static
+        parameterTypes: [int]
+      METHOD
+        method: describeConstable
+        returnType: java.util.Optional
+        modifier: public
+      METHOD
+        method: lambda$stripIndent$3
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$2
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$1
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lambda$indent$0
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String, java.lang.String]
+      FIELD
+        name: value
+        type: byte[]
+        modifiers: private final
+        value: 
+          ARRAY
+            componentType: byte
+            length: 11
+            contents: [
+              value: 84
+              value: 101
+              value: 115
+              value: 116
+              value: 32
+              value: 83
+              value: 116
+              value: 114
+              value: 105
+              value: 110
+              value: 103
+          ]
+      FIELD
+        name: coder
+        type: byte
+        modifiers: private final
+        value: 0
+      FIELD
+        name: hash
+        type: int
+        modifiers: private
+        value: 0
+      FIELD
+        name: hashIsZero
+        type: boolean
+        modifiers: private
+        value: false
+      FIELD
+        name: serialVersionUID
+        type: long
+        modifiers: private static final
+        value: -6849794470754667710
+      FIELD
+        name: COMPACT_STRINGS
+        type: boolean
+        modifiers: static final
+        value: true
+      FIELD
+        name: serialPersistentFields
+        type: ObjectStreamField[]
+        modifiers: private static final
+        value: 
+          ARRAY
+            componentType: java.io.ObjectStreamField
+            length: 0
+            contents: []
+      FIELD
+        name: CASE_INSENSITIVE_ORDER
+        type: Comparator
+        modifiers: public static final
+        referenceValue: java.lang.String$CaseInsensitiveComparator@7cca494b
+      FIELD
+        name: LATIN1
+        type: byte
+        modifiers: static final
+        value: 0
+      FIELD
+        name: UTF16
+        type: byte
+        modifiers: static final
+        value: 1
+  INTERFACE
+    name: Comparable
+      METHOD
+        method: value
+        returnType: [B
+        modifier: 
+      METHOD
+        method: equals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: length
+        returnType: int
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: hashCode
+        returnType: int
+        modifier: public
+      METHOD
+        method: getChars
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, char[], int]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public volatile
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: checkIndex
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [long]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [double]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [float]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [boolean]
+      METHOD
+        method: coder
+        returnType: byte
+        modifier: 
+      METHOD
+        method: rangeCheck
+        returnType: java.lang.Void
+        modifier: private static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: checkBoundsOffCount
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: isLatin1
+        returnType: boolean
+        modifier: 
+      METHOD
+        method: charAt
+        returnType: char
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointAt
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointBefore
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointCount
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: offsetByCodePoints
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: checkBoundsBeginEnd
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        exceptions: [java.io.UnsupportedEncodingException]
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: 
+        parameterTypes: [byte[], int, byte]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, byte[], int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        parameterTypes: [java.nio.charset.Charset]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.StringBuffer]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: nonSyncContentEquals
+        returnType: boolean
+        modifier: private
+        parameterTypes: [java.lang.AbstractStringBuilder]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [int, java.lang.String, int, int]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [boolean, int, java.lang.String, int, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: isEmpty
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [char, char]
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence]
+      METHOD
+        method: matches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: replaceFirst
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: replaceAll
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: trim
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: strip
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripLeading
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripTrailing
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: indexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: lines
+        returnType: java.util.stream.Stream
+        modifier: public
+      METHOD
+        method: repeat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: outdent
+        returnType: int
+        modifier: private static
+        parameterTypes: [java.util.List]
+      METHOD
+        method: isBlank
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: toCharArray
+        returnType: [C
+        modifier: public
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.util.Locale, java.lang.String, java.lang.Object[]]
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.String, java.lang.Object[]]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.Object
+        modifier: public volatile
+        exceptions: [java.lang.ReflectiveOperationException]
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: codePoints
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: equalsIgnoreCase
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: compareToIgnoreCase
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: endsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: subSequence
+        returnType: java.lang.CharSequence
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: concat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: contains
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence[]]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.CharSequence, java.lang.Iterable]
+      METHOD
+        method: indent
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: stripIndent
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: translateEscapes
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: chars
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: transform
+        returnType: java.lang.Object
+        modifier: public
+        parameterTypes: [java.util.function.Function]
+      METHOD
+        method: formatted
+        returnType: java.lang.String
+        modifier: public transient
+        parameterTypes: [java.lang.Object[]]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: intern
+        returnType: java.lang.String
+        modifier: public native
+      METHOD
+        method: checkOffset
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOfCodePoint
+        returnType: java.lang.String
+        modifier: static
+        parameterTypes: [int]
+      METHOD
+        method: describeConstable
+        returnType: java.util.Optional
+        modifier: public
+      METHOD
+        method: lambda$stripIndent$3
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$2
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$1
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lambda$indent$0
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String, java.lang.String]
+      FIELD
+        name: value
+        type: byte[]
+        modifiers: private final
+        value: 
+          ARRAY
+            componentType: byte
+            length: 11
+            contents: [
+              value: 84
+              value: 101
+              value: 115
+              value: 116
+              value: 32
+              value: 83
+              value: 116
+              value: 114
+              value: 105
+              value: 110
+              value: 103
+          ]
+      FIELD
+        name: coder
+        type: byte
+        modifiers: private final
+        value: 0
+      FIELD
+        name: hash
+        type: int
+        modifiers: private
+        value: 0
+      FIELD
+        name: hashIsZero
+        type: boolean
+        modifiers: private
+        value: false
+      FIELD
+        name: serialVersionUID
+        type: long
+        modifiers: private static final
+        value: -6849794470754667710
+      FIELD
+        name: COMPACT_STRINGS
+        type: boolean
+        modifiers: static final
+        value: true
+      FIELD
+        name: serialPersistentFields
+        type: ObjectStreamField[]
+        modifiers: private static final
+        value: 
+          ARRAY
+            componentType: java.io.ObjectStreamField
+            length: 0
+            contents: []
+      FIELD
+        name: CASE_INSENSITIVE_ORDER
+        type: Comparator
+        modifiers: public static final
+        referenceValue: java.lang.String$CaseInsensitiveComparator@7cca494b
+      FIELD
+        name: LATIN1
+        type: byte
+        modifiers: static final
+        value: 0
+      FIELD
+        name: UTF16
+        type: byte
+        modifiers: static final
+        value: 1
+  INTERFACE
+    name: CharSequence
+      METHOD
+        method: value
+        returnType: [B
+        modifier: 
+      METHOD
+        method: equals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: length
+        returnType: int
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: hashCode
+        returnType: int
+        modifier: public
+      METHOD
+        method: getChars
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, char[], int]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public volatile
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: checkIndex
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [long]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [double]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [float]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [boolean]
+      METHOD
+        method: coder
+        returnType: byte
+        modifier: 
+      METHOD
+        method: rangeCheck
+        returnType: java.lang.Void
+        modifier: private static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: checkBoundsOffCount
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: isLatin1
+        returnType: boolean
+        modifier: 
+      METHOD
+        method: charAt
+        returnType: char
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointAt
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointBefore
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointCount
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: offsetByCodePoints
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: checkBoundsBeginEnd
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        exceptions: [java.io.UnsupportedEncodingException]
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: 
+        parameterTypes: [byte[], int, byte]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, byte[], int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        parameterTypes: [java.nio.charset.Charset]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.StringBuffer]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: nonSyncContentEquals
+        returnType: boolean
+        modifier: private
+        parameterTypes: [java.lang.AbstractStringBuilder]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [int, java.lang.String, int, int]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [boolean, int, java.lang.String, int, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: isEmpty
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [char, char]
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence]
+      METHOD
+        method: matches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: replaceFirst
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: replaceAll
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: trim
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: strip
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripLeading
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripTrailing
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: indexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: lines
+        returnType: java.util.stream.Stream
+        modifier: public
+      METHOD
+        method: repeat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: outdent
+        returnType: int
+        modifier: private static
+        parameterTypes: [java.util.List]
+      METHOD
+        method: isBlank
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: toCharArray
+        returnType: [C
+        modifier: public
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.util.Locale, java.lang.String, java.lang.Object[]]
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.String, java.lang.Object[]]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.Object
+        modifier: public volatile
+        exceptions: [java.lang.ReflectiveOperationException]
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: codePoints
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: equalsIgnoreCase
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: compareToIgnoreCase
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: endsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: subSequence
+        returnType: java.lang.CharSequence
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: concat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: contains
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence[]]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.CharSequence, java.lang.Iterable]
+      METHOD
+        method: indent
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: stripIndent
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: translateEscapes
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: chars
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: transform
+        returnType: java.lang.Object
+        modifier: public
+        parameterTypes: [java.util.function.Function]
+      METHOD
+        method: formatted
+        returnType: java.lang.String
+        modifier: public transient
+        parameterTypes: [java.lang.Object[]]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: intern
+        returnType: java.lang.String
+        modifier: public native
+      METHOD
+        method: checkOffset
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOfCodePoint
+        returnType: java.lang.String
+        modifier: static
+        parameterTypes: [int]
+      METHOD
+        method: describeConstable
+        returnType: java.util.Optional
+        modifier: public
+      METHOD
+        method: lambda$stripIndent$3
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$2
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$1
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lambda$indent$0
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String, java.lang.String]
+      FIELD
+        name: value
+        type: byte[]
+        modifiers: private final
+        value: 
+          ARRAY
+            componentType: byte
+            length: 11
+            contents: [
+              value: 84
+              value: 101
+              value: 115
+              value: 116
+              value: 32
+              value: 83
+              value: 116
+              value: 114
+              value: 105
+              value: 110
+              value: 103
+          ]
+      FIELD
+        name: coder
+        type: byte
+        modifiers: private final
+        value: 0
+      FIELD
+        name: hash
+        type: int
+        modifiers: private
+        value: 0
+      FIELD
+        name: hashIsZero
+        type: boolean
+        modifiers: private
+        value: false
+      FIELD
+        name: serialVersionUID
+        type: long
+        modifiers: private static final
+        value: -6849794470754667710
+      FIELD
+        name: COMPACT_STRINGS
+        type: boolean
+        modifiers: static final
+        value: true
+      FIELD
+        name: serialPersistentFields
+        type: ObjectStreamField[]
+        modifiers: private static final
+        value: 
+          ARRAY
+            componentType: java.io.ObjectStreamField
+            length: 0
+            contents: []
+      FIELD
+        name: CASE_INSENSITIVE_ORDER
+        type: Comparator
+        modifiers: public static final
+        referenceValue: java.lang.String$CaseInsensitiveComparator@7cca494b
+      FIELD
+        name: LATIN1
+        type: byte
+        modifiers: static final
+        value: 0
+      FIELD
+        name: UTF16
+        type: byte
+        modifiers: static final
+        value: 1
+  INTERFACE
+    name: Constable
+      METHOD
+        method: value
+        returnType: [B
+        modifier: 
+      METHOD
+        method: equals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: length
+        returnType: int
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: hashCode
+        returnType: int
+        modifier: public
+      METHOD
+        method: getChars
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, char[], int]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public volatile
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: checkIndex
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [long]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [double]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [float]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [boolean]
+      METHOD
+        method: coder
+        returnType: byte
+        modifier: 
+      METHOD
+        method: rangeCheck
+        returnType: java.lang.Void
+        modifier: private static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: checkBoundsOffCount
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: isLatin1
+        returnType: boolean
+        modifier: 
+      METHOD
+        method: charAt
+        returnType: char
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointAt
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointBefore
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointCount
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: offsetByCodePoints
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: checkBoundsBeginEnd
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        exceptions: [java.io.UnsupportedEncodingException]
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: 
+        parameterTypes: [byte[], int, byte]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, byte[], int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        parameterTypes: [java.nio.charset.Charset]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.StringBuffer]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: nonSyncContentEquals
+        returnType: boolean
+        modifier: private
+        parameterTypes: [java.lang.AbstractStringBuilder]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [int, java.lang.String, int, int]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [boolean, int, java.lang.String, int, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: isEmpty
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [char, char]
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence]
+      METHOD
+        method: matches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: replaceFirst
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: replaceAll
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: trim
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: strip
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripLeading
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripTrailing
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: indexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: lines
+        returnType: java.util.stream.Stream
+        modifier: public
+      METHOD
+        method: repeat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: outdent
+        returnType: int
+        modifier: private static
+        parameterTypes: [java.util.List]
+      METHOD
+        method: isBlank
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: toCharArray
+        returnType: [C
+        modifier: public
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.util.Locale, java.lang.String, java.lang.Object[]]
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.String, java.lang.Object[]]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.Object
+        modifier: public volatile
+        exceptions: [java.lang.ReflectiveOperationException]
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: codePoints
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: equalsIgnoreCase
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: compareToIgnoreCase
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: endsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: subSequence
+        returnType: java.lang.CharSequence
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: concat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: contains
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence[]]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.CharSequence, java.lang.Iterable]
+      METHOD
+        method: indent
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: stripIndent
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: translateEscapes
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: chars
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: transform
+        returnType: java.lang.Object
+        modifier: public
+        parameterTypes: [java.util.function.Function]
+      METHOD
+        method: formatted
+        returnType: java.lang.String
+        modifier: public transient
+        parameterTypes: [java.lang.Object[]]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: intern
+        returnType: java.lang.String
+        modifier: public native
+      METHOD
+        method: checkOffset
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOfCodePoint
+        returnType: java.lang.String
+        modifier: static
+        parameterTypes: [int]
+      METHOD
+        method: describeConstable
+        returnType: java.util.Optional
+        modifier: public
+      METHOD
+        method: lambda$stripIndent$3
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$2
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$1
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lambda$indent$0
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String, java.lang.String]
+      FIELD
+        name: value
+        type: byte[]
+        modifiers: private final
+        value: 
+          ARRAY
+            componentType: byte
+            length: 11
+            contents: [
+              value: 84
+              value: 101
+              value: 115
+              value: 116
+              value: 32
+              value: 83
+              value: 116
+              value: 114
+              value: 105
+              value: 110
+              value: 103
+          ]
+      FIELD
+        name: coder
+        type: byte
+        modifiers: private final
+        value: 0
+      FIELD
+        name: hash
+        type: int
+        modifiers: private
+        value: 0
+      FIELD
+        name: hashIsZero
+        type: boolean
+        modifiers: private
+        value: false
+      FIELD
+        name: serialVersionUID
+        type: long
+        modifiers: private static final
+        value: -6849794470754667710
+      FIELD
+        name: COMPACT_STRINGS
+        type: boolean
+        modifiers: static final
+        value: true
+      FIELD
+        name: serialPersistentFields
+        type: ObjectStreamField[]
+        modifiers: private static final
+        value: 
+          ARRAY
+            componentType: java.io.ObjectStreamField
+            length: 0
+            contents: []
+      FIELD
+        name: CASE_INSENSITIVE_ORDER
+        type: Comparator
+        modifiers: public static final
+        referenceValue: java.lang.String$CaseInsensitiveComparator@7cca494b
+      FIELD
+        name: LATIN1
+        type: byte
+        modifiers: static final
+        value: 0
+      FIELD
+        name: UTF16
+        type: byte
+        modifiers: static final
+        value: 1
+  INTERFACE
+    name: ConstantDesc
+      METHOD
+        method: value
+        returnType: [B
+        modifier: 
+      METHOD
+        method: equals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: length
+        returnType: int
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: hashCode
+        returnType: int
+        modifier: public
+      METHOD
+        method: getChars
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, char[], int]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public volatile
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: compareTo
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: indexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: checkIndex
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.Object]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [long]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [int]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [double]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [float]
+      METHOD
+        method: valueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [boolean]
+      METHOD
+        method: coder
+        returnType: byte
+        modifier: 
+      METHOD
+        method: rangeCheck
+        returnType: java.lang.Void
+        modifier: private static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: checkBoundsOffCount
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: isLatin1
+        returnType: boolean
+        modifier: 
+      METHOD
+        method: charAt
+        returnType: char
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointAt
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointBefore
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: codePointCount
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: offsetByCodePoints
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: checkBoundsBeginEnd
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int, int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        exceptions: [java.io.UnsupportedEncodingException]
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: 
+        parameterTypes: [byte[], int, byte]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+      METHOD
+        method: getBytes
+        returnType: void
+        modifier: public
+        parameterTypes: [int, int, byte[], int]
+      METHOD
+        method: getBytes
+        returnType: [B
+        modifier: public
+        parameterTypes: [java.nio.charset.Charset]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.StringBuffer]
+      METHOD
+        method: contentEquals
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: nonSyncContentEquals
+        returnType: boolean
+        modifier: private
+        parameterTypes: [java.lang.AbstractStringBuilder]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [int, java.lang.String, int, int]
+      METHOD
+        method: regionMatches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [boolean, int, java.lang.String, int, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: startsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: static
+        parameterTypes: [byte[], byte, int, java.lang.String, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: lastIndexOf
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: substring
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: isEmpty
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [char, char]
+      METHOD
+        method: replace
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence]
+      METHOD
+        method: matches
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: replaceFirst
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: replaceAll
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String, java.lang.String]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String, int]
+      METHOD
+        method: split
+        returnType: [Ljava.lang.String;
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toLowerCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: toUpperCase
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.util.Locale]
+      METHOD
+        method: trim
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: strip
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripLeading
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: stripTrailing
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: indexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: lines
+        returnType: java.util.stream.Stream
+        modifier: public
+      METHOD
+        method: repeat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: lastIndexOfNonWhitespace
+        returnType: int
+        modifier: private
+      METHOD
+        method: outdent
+        returnType: int
+        modifier: private static
+        parameterTypes: [java.util.List]
+      METHOD
+        method: isBlank
+        returnType: boolean
+        modifier: public
+      METHOD
+        method: toCharArray
+        returnType: [C
+        modifier: public
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.util.Locale, java.lang.String, java.lang.Object[]]
+      METHOD
+        method: format
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.String, java.lang.Object[]]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: resolveConstantDesc
+        returnType: java.lang.Object
+        modifier: public volatile
+        exceptions: [java.lang.ReflectiveOperationException]
+        parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+      METHOD
+        method: codePoints
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: equalsIgnoreCase
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: compareToIgnoreCase
+        returnType: int
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: endsWith
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: subSequence
+        returnType: java.lang.CharSequence
+        modifier: public
+        parameterTypes: [int, int]
+      METHOD
+        method: concat
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: contains
+        returnType: boolean
+        modifier: public
+        parameterTypes: [java.lang.CharSequence]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static transient
+        parameterTypes: [java.lang.CharSequence, java.lang.CharSequence[]]
+      METHOD
+        method: join
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [java.lang.CharSequence, java.lang.Iterable]
+      METHOD
+        method: indent
+        returnType: java.lang.String
+        modifier: public
+        parameterTypes: [int]
+      METHOD
+        method: stripIndent
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: translateEscapes
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: chars
+        returnType: java.util.stream.IntStream
+        modifier: public
+      METHOD
+        method: transform
+        returnType: java.lang.Object
+        modifier: public
+        parameterTypes: [java.util.function.Function]
+      METHOD
+        method: formatted
+        returnType: java.lang.String
+        modifier: public transient
+        parameterTypes: [java.lang.Object[]]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[], int, int]
+      METHOD
+        method: copyValueOf
+        returnType: java.lang.String
+        modifier: public static
+        parameterTypes: [char[]]
+      METHOD
+        method: intern
+        returnType: java.lang.String
+        modifier: public native
+      METHOD
+        method: checkOffset
+        returnType: void
+        modifier: static
+        parameterTypes: [int, int]
+      METHOD
+        method: valueOfCodePoint
+        returnType: java.lang.String
+        modifier: static
+        parameterTypes: [int]
+      METHOD
+        method: describeConstable
+        returnType: java.util.Optional
+        modifier: public
+      METHOD
+        method: lambda$stripIndent$3
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$2
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [int, java.lang.String]
+      METHOD
+        method: lambda$indent$1
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String]
+      METHOD
+        method: lambda$indent$0
+        returnType: java.lang.String
+        modifier: private static
+        parameterTypes: [java.lang.String, java.lang.String]
+      FIELD
+        name: value
+        type: byte[]
+        modifiers: private final
+        value: 
+          ARRAY
+            componentType: byte
+            length: 11
+            contents: [
+              value: 84
+              value: 101
+              value: 115
+              value: 116
+              value: 32
+              value: 83
+              value: 116
+              value: 114
+              value: 105
+              value: 110
+              value: 103
+          ]
+      FIELD
+        name: coder
+        type: byte
+        modifiers: private final
+        value: 0
+      FIELD
+        name: hash
+        type: int
+        modifiers: private
+        value: 0
+      FIELD
+        name: hashIsZero
+        type: boolean
+        modifiers: private
+        value: false
+      FIELD
+        name: serialVersionUID
+        type: long
+        modifiers: private static final
+        value: -6849794470754667710
+      FIELD
+        name: COMPACT_STRINGS
+        type: boolean
+        modifiers: static final
+        value: true
+      FIELD
+        name: serialPersistentFields
+        type: ObjectStreamField[]
+        modifiers: private static final
+        value: 
+          ARRAY
+            componentType: java.io.ObjectStreamField
+            length: 0
+            contents: []
+      FIELD
+        name: CASE_INSENSITIVE_ORDER
+        type: Comparator
+        modifiers: public static final
+        referenceValue: java.lang.String$CaseInsensitiveComparator@7cca494b
+      FIELD
+        name: LATIN1
+        type: byte
+        modifiers: static final
+        value: 0
+      FIELD
+        name: UTF16
+        type: byte
+        modifiers: static final
+        value: 1
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[]]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[], int, int]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[], java.nio.charset.Charset]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[], java.lang.String]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[], int, int, java.nio.charset.Charset]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [java.lang.StringBuilder]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [java.lang.StringBuffer]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [char[], int, int]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [char[]]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [java.lang.String]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[], int, int, java.lang.String]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[], int]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [byte[], int, int, int]
+    modifiers: public
+  CONSTRUCTOR
+    name: java.lang.String
+    parameters: [int[], int, int]
+    modifiers: public
+  METHOD
+    method: value
+    returnType: [B
+    modifier: 
+  METHOD
+    method: equals
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.Object]
+  METHOD
+    method: length
+    returnType: int
+    modifier: public
+  METHOD
+    method: toString
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: hashCode
+    returnType: int
+    modifier: public
+  METHOD
+    method: getChars
+    returnType: void
+    modifier: public
+    parameterTypes: [int, int, char[], int]
+  METHOD
+    method: compareTo
+    returnType: int
+    modifier: public volatile
+    parameterTypes: [java.lang.Object]
+  METHOD
+    method: compareTo
+    returnType: int
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: indexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [int, int]
+  METHOD
+    method: indexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: indexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [java.lang.String, int]
+  METHOD
+    method: indexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: indexOf
+    returnType: int
+    modifier: static
+    parameterTypes: [byte[], byte, int, java.lang.String, int]
+  METHOD
+    method: checkIndex
+    returnType: void
+    modifier: static
+    parameterTypes: [int, int]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [char[]]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [java.lang.Object]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [long]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [char[], int, int]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [int]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [char]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [double]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [float]
+  METHOD
+    method: valueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [boolean]
+  METHOD
+    method: coder
+    returnType: byte
+    modifier: 
+  METHOD
+    method: rangeCheck
+    returnType: java.lang.Void
+    modifier: private static
+    parameterTypes: [char[], int, int]
+  METHOD
+    method: checkBoundsOffCount
+    returnType: void
+    modifier: static
+    parameterTypes: [int, int, int]
+  METHOD
+    method: isLatin1
+    returnType: boolean
+    modifier: 
+  METHOD
+    method: charAt
+    returnType: char
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: codePointAt
+    returnType: int
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: codePointBefore
+    returnType: int
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: codePointCount
+    returnType: int
+    modifier: public
+    parameterTypes: [int, int]
+  METHOD
+    method: offsetByCodePoints
+    returnType: int
+    modifier: public
+    parameterTypes: [int, int]
+  METHOD
+    method: checkBoundsBeginEnd
+    returnType: void
+    modifier: static
+    parameterTypes: [int, int, int]
+  METHOD
+    method: getBytes
+    returnType: [B
+    modifier: public
+    exceptions: [java.io.UnsupportedEncodingException]
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: getBytes
+    returnType: void
+    modifier: 
+    parameterTypes: [byte[], int, byte]
+  METHOD
+    method: getBytes
+    returnType: [B
+    modifier: public
+  METHOD
+    method: getBytes
+    returnType: void
+    modifier: public
+    parameterTypes: [int, int, byte[], int]
+  METHOD
+    method: getBytes
+    returnType: [B
+    modifier: public
+    parameterTypes: [java.nio.charset.Charset]
+  METHOD
+    method: contentEquals
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.StringBuffer]
+  METHOD
+    method: contentEquals
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.CharSequence]
+  METHOD
+    method: nonSyncContentEquals
+    returnType: boolean
+    modifier: private
+    parameterTypes: [java.lang.AbstractStringBuilder]
+  METHOD
+    method: regionMatches
+    returnType: boolean
+    modifier: public
+    parameterTypes: [int, java.lang.String, int, int]
+  METHOD
+    method: regionMatches
+    returnType: boolean
+    modifier: public
+    parameterTypes: [boolean, int, java.lang.String, int, int]
+  METHOD
+    method: startsWith
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.String, int]
+  METHOD
+    method: startsWith
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: lastIndexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: lastIndexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: lastIndexOf
+    returnType: int
+    modifier: static
+    parameterTypes: [byte[], byte, int, java.lang.String, int]
+  METHOD
+    method: lastIndexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [int, int]
+  METHOD
+    method: lastIndexOf
+    returnType: int
+    modifier: public
+    parameterTypes: [java.lang.String, int]
+  METHOD
+    method: substring
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [int, int]
+  METHOD
+    method: substring
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: isEmpty
+    returnType: boolean
+    modifier: public
+  METHOD
+    method: replace
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [char, char]
+  METHOD
+    method: replace
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [java.lang.CharSequence, java.lang.CharSequence]
+  METHOD
+    method: matches
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: replaceFirst
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [java.lang.String, java.lang.String]
+  METHOD
+    method: replaceAll
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [java.lang.String, java.lang.String]
+  METHOD
+    method: split
+    returnType: [Ljava.lang.String;
+    modifier: public
+    parameterTypes: [java.lang.String, int]
+  METHOD
+    method: split
+    returnType: [Ljava.lang.String;
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: toLowerCase
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: toLowerCase
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [java.util.Locale]
+  METHOD
+    method: toUpperCase
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: toUpperCase
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [java.util.Locale]
+  METHOD
+    method: trim
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: strip
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: stripLeading
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: stripTrailing
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: indexOfNonWhitespace
+    returnType: int
+    modifier: private
+  METHOD
+    method: lines
+    returnType: java.util.stream.Stream
+    modifier: public
+  METHOD
+    method: repeat
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: lastIndexOfNonWhitespace
+    returnType: int
+    modifier: private
+  METHOD
+    method: outdent
+    returnType: int
+    modifier: private static
+    parameterTypes: [java.util.List]
+  METHOD
+    method: isBlank
+    returnType: boolean
+    modifier: public
+  METHOD
+    method: toCharArray
+    returnType: [C
+    modifier: public
+  METHOD
+    method: format
+    returnType: java.lang.String
+    modifier: public static transient
+    parameterTypes: [java.util.Locale, java.lang.String, java.lang.Object[]]
+  METHOD
+    method: format
+    returnType: java.lang.String
+    modifier: public static transient
+    parameterTypes: [java.lang.String, java.lang.Object[]]
+  METHOD
+    method: resolveConstantDesc
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+  METHOD
+    method: resolveConstantDesc
+    returnType: java.lang.Object
+    modifier: public volatile
+    exceptions: [java.lang.ReflectiveOperationException]
+    parameterTypes: [java.lang.invoke.MethodHandles$Lookup]
+  METHOD
+    method: codePoints
+    returnType: java.util.stream.IntStream
+    modifier: public
+  METHOD
+    method: equalsIgnoreCase
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: compareToIgnoreCase
+    returnType: int
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: endsWith
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: subSequence
+    returnType: java.lang.CharSequence
+    modifier: public
+    parameterTypes: [int, int]
+  METHOD
+    method: concat
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: contains
+    returnType: boolean
+    modifier: public
+    parameterTypes: [java.lang.CharSequence]
+  METHOD
+    method: join
+    returnType: java.lang.String
+    modifier: public static transient
+    parameterTypes: [java.lang.CharSequence, java.lang.CharSequence[]]
+  METHOD
+    method: join
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [java.lang.CharSequence, java.lang.Iterable]
+  METHOD
+    method: indent
+    returnType: java.lang.String
+    modifier: public
+    parameterTypes: [int]
+  METHOD
+    method: stripIndent
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: translateEscapes
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: chars
+    returnType: java.util.stream.IntStream
+    modifier: public
+  METHOD
+    method: transform
+    returnType: java.lang.Object
+    modifier: public
+    parameterTypes: [java.util.function.Function]
+  METHOD
+    method: formatted
+    returnType: java.lang.String
+    modifier: public transient
+    parameterTypes: [java.lang.Object[]]
+  METHOD
+    method: copyValueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [char[], int, int]
+  METHOD
+    method: copyValueOf
+    returnType: java.lang.String
+    modifier: public static
+    parameterTypes: [char[]]
+  METHOD
+    method: intern
+    returnType: java.lang.String
+    modifier: public native
+  METHOD
+    method: checkOffset
+    returnType: void
+    modifier: static
+    parameterTypes: [int, int]
+  METHOD
+    method: valueOfCodePoint
+    returnType: java.lang.String
+    modifier: static
+    parameterTypes: [int]
+  METHOD
+    method: describeConstable
+    returnType: java.util.Optional
+    modifier: public
+  METHOD
+    method: lambda$stripIndent$3
+    returnType: java.lang.String
+    modifier: private static
+    parameterTypes: [int, java.lang.String]
+  METHOD
+    method: lambda$indent$2
+    returnType: java.lang.String
+    modifier: private static
+    parameterTypes: [int, java.lang.String]
+  METHOD
+    method: lambda$indent$1
+    returnType: java.lang.String
+    modifier: private static
+    parameterTypes: [java.lang.String]
+  METHOD
+    method: lambda$indent$0
+    returnType: java.lang.String
+    modifier: private static
+    parameterTypes: [java.lang.String, java.lang.String]
+  FIELD
+    name: value
+    type: byte[]
+    modifiers: private final
+    value: 
+      ARRAY
+        componentType: byte
+        length: 11
+        contents: [
+          value: 84
+          value: 101
+          value: 115
+          value: 116
+          value: 32
+          value: 83
+          value: 116
+          value: 114
+          value: 105
+          value: 110
+          value: 103
+      ]
+  FIELD
+    name: coder
+    type: byte
+    modifiers: private final
+    value: 0
+  FIELD
+    name: hash
+    type: int
+    modifiers: private
+    value: 0
+  FIELD
+    name: hashIsZero
+    type: boolean
+    modifiers: private
+    value: false
+  FIELD
+    name: serialVersionUID
+    type: long
+    modifiers: private static final
+    value: -6849794470754667710
+  FIELD
+    name: COMPACT_STRINGS
+    type: boolean
+    modifiers: static final
+    value: true
+  FIELD
+    name: serialPersistentFields
+    type: ObjectStreamField[]
+    modifiers: private static final
+    value: 
+      ARRAY
+        componentType: java.io.ObjectStreamField
+        length: 0
+        contents: []
+  FIELD
+    name: CASE_INSENSITIVE_ORDER
+    type: Comparator
+    modifiers: public static final
+    referenceValue: java.lang.String$CaseInsensitiveComparator@7cca494b
+  FIELD
+    name: LATIN1
+    type: byte
+    modifiers: static final
+    value: 0
+  FIELD
+    name: UTF16
+    type: byte
+    modifiers: static final
+    value: 1
+======================================================

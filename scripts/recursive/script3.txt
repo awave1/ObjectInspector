@@ -1,0 +1,2307 @@
+======================================================
+Filename: script3.txt
+Running Test: data.ClassB
+Recursive: true
+CLASS: ClassB
+  SUPERCLASS: data.ClassC
+    CLASS: ClassC
+      SUPERCLASS: data.ClassD
+        CLASS: ClassD
+          SUPERCLASS: java.lang.Object
+            CLASS: Object
+              CONSTRUCTOR
+                name: java.lang.Object
+                modifiers: public
+              METHOD
+                method: finalize
+                returnType: void
+                modifier: protected
+                exceptions: [java.lang.Throwable]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+              METHOD
+                method: equals
+                returnType: boolean
+                modifier: public
+                parameterTypes: [java.lang.Object]
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: hashCode
+                returnType: int
+                modifier: public native
+              METHOD
+                method: getClass
+                returnType: java.lang.Class
+                modifier: public final native
+              METHOD
+                method: clone
+                returnType: java.lang.Object
+                modifier: protected native
+                exceptions: [java.lang.CloneNotSupportedException]
+              METHOD
+                method: notify
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: notifyAll
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+          CONSTRUCTOR
+            name: data.ClassD
+            modifiers: public
+          CONSTRUCTOR
+            name: data.ClassD
+            parameters: [int]
+            modifiers: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: getVal3
+            returnType: int
+            modifier: public
+          FIELD
+            name: val
+            type: ClassA
+            modifiers: private
+            value: 
+            CLASS: ClassA
+              SUPERCLASS: java.lang.Object
+                CLASS: Object
+                  CONSTRUCTOR
+                    name: java.lang.Object
+                    modifiers: public
+                  METHOD
+                    method: finalize
+                    returnType: void
+                    modifier: protected
+                    exceptions: [java.lang.Throwable]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                  METHOD
+                    method: equals
+                    returnType: boolean
+                    modifier: public
+                    parameterTypes: [java.lang.Object]
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: hashCode
+                    returnType: int
+                    modifier: public native
+                  METHOD
+                    method: getClass
+                    returnType: java.lang.Class
+                    modifier: public final native
+                  METHOD
+                    method: clone
+                    returnType: java.lang.Object
+                    modifier: protected native
+                    exceptions: [java.lang.CloneNotSupportedException]
+                  METHOD
+                    method: notify
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: notifyAll
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+              INTERFACE
+                name: Serializable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 17
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              INTERFACE
+                name: Runnable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 17
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              CONSTRUCTOR
+                name: data.ClassA
+                modifiers: public
+              CONSTRUCTOR
+                name: data.ClassA
+                parameters: [int]
+                modifiers: public
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 17
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          FIELD
+            name: val2
+            type: ClassA
+            modifiers: private static
+            value: null
+          FIELD
+            name: val3
+            type: int
+            modifiers: private
+            value: 34
+          FIELD
+            name: vallarray
+            type: ClassA[]
+            modifiers: private
+            value: 
+              ARRAY
+                componentType: data.ClassA
+                length: 10
+                contents: [
+                  value: null
+                  value: null
+                  value: null
+                  value: null
+                  value: null
+                  value: null
+                  value: null
+                  value: null
+                  value: null
+                  value: null
+              ]
+      INTERFACE
+        name: InterfaceA
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: func3
+            returnType: void
+            modifier: public abstract
+            parameterTypes: [int]
+          METHOD
+            method: func0
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int, boolean]
+          METHOD
+            method: func1
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int, double, boolean, java.lang.String]
+          METHOD
+            method: func2
+            returnType: int
+            modifier: public
+            exceptions: [java.lang.Exception, java.lang.ArithmeticException, java.lang.IllegalMonitorStateException]
+            parameterTypes: [java.lang.String]
+          FIELD
+            name: val2
+            type: ClassA
+            modifiers: private
+            value: 
+            CLASS: ClassA
+              SUPERCLASS: java.lang.Object
+                CLASS: Object
+                  CONSTRUCTOR
+                    name: java.lang.Object
+                    modifiers: public
+                  METHOD
+                    method: finalize
+                    returnType: void
+                    modifier: protected
+                    exceptions: [java.lang.Throwable]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                  METHOD
+                    method: equals
+                    returnType: boolean
+                    modifier: public
+                    parameterTypes: [java.lang.Object]
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: hashCode
+                    returnType: int
+                    modifier: public native
+                  METHOD
+                    method: getClass
+                    returnType: java.lang.Class
+                    modifier: public final native
+                  METHOD
+                    method: clone
+                    returnType: java.lang.Object
+                    modifier: protected native
+                    exceptions: [java.lang.CloneNotSupportedException]
+                  METHOD
+                    method: notify
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: notifyAll
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+              INTERFACE
+                name: Serializable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 100
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              INTERFACE
+                name: Runnable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 100
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              CONSTRUCTOR
+                name: data.ClassA
+                modifiers: public
+              CONSTRUCTOR
+                name: data.ClassA
+                parameters: [int]
+                modifiers: public
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 100
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          FIELD
+            name: val3
+            type: ClassA
+            modifiers: private
+            value: 
+            CLASS: ClassA
+              SUPERCLASS: java.lang.Object
+                CLASS: Object
+                  CONSTRUCTOR
+                    name: java.lang.Object
+                    modifiers: public
+                  METHOD
+                    method: finalize
+                    returnType: void
+                    modifier: protected
+                    exceptions: [java.lang.Throwable]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                  METHOD
+                    method: equals
+                    returnType: boolean
+                    modifier: public
+                    parameterTypes: [java.lang.Object]
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: hashCode
+                    returnType: int
+                    modifier: public native
+                  METHOD
+                    method: getClass
+                    returnType: java.lang.Class
+                    modifier: public final native
+                  METHOD
+                    method: clone
+                    returnType: java.lang.Object
+                    modifier: protected native
+                    exceptions: [java.lang.CloneNotSupportedException]
+                  METHOD
+                    method: notify
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: notifyAll
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+              INTERFACE
+                name: Serializable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 2
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              INTERFACE
+                name: Runnable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 2
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              CONSTRUCTOR
+                name: data.ClassA
+                modifiers: public
+              CONSTRUCTOR
+                name: data.ClassA
+                parameters: [int]
+                modifiers: public
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 2
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          FIELD
+            name: val4
+            type: ClassA
+            modifiers: private
+            value: 
+            CLASS: ClassA
+              SUPERCLASS: java.lang.Object
+                CLASS: Object
+                  CONSTRUCTOR
+                    name: java.lang.Object
+                    modifiers: public
+                  METHOD
+                    method: finalize
+                    returnType: void
+                    modifier: protected
+                    exceptions: [java.lang.Throwable]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final native
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                    parameterTypes: [long, int]
+                  METHOD
+                    method: wait
+                    returnType: void
+                    modifier: public final
+                    exceptions: [java.lang.InterruptedException]
+                  METHOD
+                    method: equals
+                    returnType: boolean
+                    modifier: public
+                    parameterTypes: [java.lang.Object]
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: hashCode
+                    returnType: int
+                    modifier: public native
+                  METHOD
+                    method: getClass
+                    returnType: java.lang.Class
+                    modifier: public final native
+                  METHOD
+                    method: clone
+                    returnType: java.lang.Object
+                    modifier: protected native
+                    exceptions: [java.lang.CloneNotSupportedException]
+                  METHOD
+                    method: notify
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: notifyAll
+                    returnType: void
+                    modifier: public final native
+                  METHOD
+                    method: registerNatives
+                    returnType: void
+                    modifier: private static native
+              INTERFACE
+                name: Serializable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 3
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              INTERFACE
+                name: Runnable
+                  METHOD
+                    method: run
+                    returnType: void
+                    modifier: public
+                  METHOD
+                    method: toString
+                    returnType: java.lang.String
+                    modifier: public
+                  METHOD
+                    method: setVal
+                    returnType: void
+                    modifier: public
+                    exceptions: [java.lang.Exception]
+                    parameterTypes: [int]
+                  METHOD
+                    method: getVal
+                    returnType: int
+                    modifier: public
+                  METHOD
+                    method: printSomething
+                    returnType: void
+                    modifier: private
+                  FIELD
+                    name: val
+                    type: int
+                    modifiers: private
+                    value: 3
+                  FIELD
+                    name: val2
+                    type: double
+                    modifiers: private
+                    value: 0.2
+                  FIELD
+                    name: val3
+                    type: boolean
+                    modifiers: private
+                    value: true
+              CONSTRUCTOR
+                name: data.ClassA
+                modifiers: public
+              CONSTRUCTOR
+                name: data.ClassA
+                parameters: [int]
+                modifiers: public
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 3
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+      CONSTRUCTOR
+        name: data.ClassC
+        modifiers: public
+      CONSTRUCTOR
+        name: data.ClassC
+        parameters: [int, int]
+        modifiers: public
+      METHOD
+        method: run
+        returnType: void
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: func3
+        returnType: void
+        modifier: public abstract
+        parameterTypes: [int]
+      METHOD
+        method: func0
+        returnType: void
+        modifier: public
+        exceptions: [java.lang.Exception]
+        parameterTypes: [int, boolean]
+      METHOD
+        method: func1
+        returnType: void
+        modifier: public
+        exceptions: [java.lang.Exception]
+        parameterTypes: [int, double, boolean, java.lang.String]
+      METHOD
+        method: func2
+        returnType: int
+        modifier: public
+        exceptions: [java.lang.Exception, java.lang.ArithmeticException, java.lang.IllegalMonitorStateException]
+        parameterTypes: [java.lang.String]
+      FIELD
+        name: val2
+        type: ClassA
+        modifiers: private
+        value: 
+        CLASS: ClassA
+          SUPERCLASS: java.lang.Object
+            CLASS: Object
+              CONSTRUCTOR
+                name: java.lang.Object
+                modifiers: public
+              METHOD
+                method: finalize
+                returnType: void
+                modifier: protected
+                exceptions: [java.lang.Throwable]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+              METHOD
+                method: equals
+                returnType: boolean
+                modifier: public
+                parameterTypes: [java.lang.Object]
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: hashCode
+                returnType: int
+                modifier: public native
+              METHOD
+                method: getClass
+                returnType: java.lang.Class
+                modifier: public final native
+              METHOD
+                method: clone
+                returnType: java.lang.Object
+                modifier: protected native
+                exceptions: [java.lang.CloneNotSupportedException]
+              METHOD
+                method: notify
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: notifyAll
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+          INTERFACE
+            name: Serializable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 100
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          INTERFACE
+            name: Runnable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 100
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          CONSTRUCTOR
+            name: data.ClassA
+            modifiers: public
+          CONSTRUCTOR
+            name: data.ClassA
+            parameters: [int]
+            modifiers: public
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 100
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      FIELD
+        name: val3
+        type: ClassA
+        modifiers: private
+        value: 
+        CLASS: ClassA
+          SUPERCLASS: java.lang.Object
+            CLASS: Object
+              CONSTRUCTOR
+                name: java.lang.Object
+                modifiers: public
+              METHOD
+                method: finalize
+                returnType: void
+                modifier: protected
+                exceptions: [java.lang.Throwable]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+              METHOD
+                method: equals
+                returnType: boolean
+                modifier: public
+                parameterTypes: [java.lang.Object]
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: hashCode
+                returnType: int
+                modifier: public native
+              METHOD
+                method: getClass
+                returnType: java.lang.Class
+                modifier: public final native
+              METHOD
+                method: clone
+                returnType: java.lang.Object
+                modifier: protected native
+                exceptions: [java.lang.CloneNotSupportedException]
+              METHOD
+                method: notify
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: notifyAll
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+          INTERFACE
+            name: Serializable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 2
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          INTERFACE
+            name: Runnable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 2
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          CONSTRUCTOR
+            name: data.ClassA
+            modifiers: public
+          CONSTRUCTOR
+            name: data.ClassA
+            parameters: [int]
+            modifiers: public
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 2
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      FIELD
+        name: val4
+        type: ClassA
+        modifiers: private
+        value: 
+        CLASS: ClassA
+          SUPERCLASS: java.lang.Object
+            CLASS: Object
+              CONSTRUCTOR
+                name: java.lang.Object
+                modifiers: public
+              METHOD
+                method: finalize
+                returnType: void
+                modifier: protected
+                exceptions: [java.lang.Throwable]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+              METHOD
+                method: equals
+                returnType: boolean
+                modifier: public
+                parameterTypes: [java.lang.Object]
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: hashCode
+                returnType: int
+                modifier: public native
+              METHOD
+                method: getClass
+                returnType: java.lang.Class
+                modifier: public final native
+              METHOD
+                method: clone
+                returnType: java.lang.Object
+                modifier: protected native
+                exceptions: [java.lang.CloneNotSupportedException]
+              METHOD
+                method: notify
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: notifyAll
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+          INTERFACE
+            name: Serializable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 3
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          INTERFACE
+            name: Runnable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 3
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          CONSTRUCTOR
+            name: data.ClassA
+            modifiers: public
+          CONSTRUCTOR
+            name: data.ClassA
+            parameters: [int]
+            modifiers: public
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 3
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+  INTERFACE
+    name: Runnable
+      METHOD
+        method: run
+        returnType: void
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: func3
+        returnType: void
+        modifier: public
+        parameterTypes: [int]
+      FIELD
+        name: val
+        type: ClassA
+        modifiers: private
+        value: 
+        CLASS: ClassA
+          SUPERCLASS: java.lang.Object
+            CLASS: Object
+              CONSTRUCTOR
+                name: java.lang.Object
+                modifiers: public
+              METHOD
+                method: finalize
+                returnType: void
+                modifier: protected
+                exceptions: [java.lang.Throwable]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+              METHOD
+                method: equals
+                returnType: boolean
+                modifier: public
+                parameterTypes: [java.lang.Object]
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: hashCode
+                returnType: int
+                modifier: public native
+              METHOD
+                method: getClass
+                returnType: java.lang.Class
+                modifier: public final native
+              METHOD
+                method: clone
+                returnType: java.lang.Object
+                modifier: protected native
+                exceptions: [java.lang.CloneNotSupportedException]
+              METHOD
+                method: notify
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: notifyAll
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+          INTERFACE
+            name: Serializable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 3
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          INTERFACE
+            name: Runnable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 3
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          CONSTRUCTOR
+            name: data.ClassA
+            modifiers: public
+          CONSTRUCTOR
+            name: data.ClassA
+            parameters: [int]
+            modifiers: public
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 3
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      FIELD
+        name: val2
+        type: ClassA
+        modifiers: private
+        value: 
+        CLASS: ClassA
+          SUPERCLASS: java.lang.Object
+            CLASS: Object
+              CONSTRUCTOR
+                name: java.lang.Object
+                modifiers: public
+              METHOD
+                method: finalize
+                returnType: void
+                modifier: protected
+                exceptions: [java.lang.Throwable]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final
+                exceptions: [java.lang.InterruptedException]
+              METHOD
+                method: equals
+                returnType: boolean
+                modifier: public
+                parameterTypes: [java.lang.Object]
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: hashCode
+                returnType: int
+                modifier: public native
+              METHOD
+                method: getClass
+                returnType: java.lang.Class
+                modifier: public final native
+              METHOD
+                method: clone
+                returnType: java.lang.Object
+                modifier: protected native
+                exceptions: [java.lang.CloneNotSupportedException]
+              METHOD
+                method: notify
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: notifyAll
+                returnType: void
+                modifier: public final native
+              METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+          INTERFACE
+            name: Serializable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 12
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          INTERFACE
+            name: Runnable
+              METHOD
+                method: run
+                returnType: void
+                modifier: public
+              METHOD
+                method: toString
+                returnType: java.lang.String
+                modifier: public
+              METHOD
+                method: setVal
+                returnType: void
+                modifier: public
+                exceptions: [java.lang.Exception]
+                parameterTypes: [int]
+              METHOD
+                method: getVal
+                returnType: int
+                modifier: public
+              METHOD
+                method: printSomething
+                returnType: void
+                modifier: private
+              FIELD
+                name: val
+                type: int
+                modifiers: private
+                value: 12
+              FIELD
+                name: val2
+                type: double
+                modifiers: private
+                value: 0.2
+              FIELD
+                name: val3
+                type: boolean
+                modifiers: private
+                value: true
+          CONSTRUCTOR
+            name: data.ClassA
+            modifiers: public
+          CONSTRUCTOR
+            name: data.ClassA
+            parameters: [int]
+            modifiers: public
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 12
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      FIELD
+        name: val3
+        type: ClassA
+        modifiers: private
+        value: null
+  CONSTRUCTOR
+    name: data.ClassB
+    modifiers: public
+  METHOD
+    method: run
+    returnType: void
+    modifier: public
+  METHOD
+    method: toString
+    returnType: java.lang.String
+    modifier: public
+  METHOD
+    method: func3
+    returnType: void
+    modifier: public
+    parameterTypes: [int]
+  FIELD
+    name: val
+    type: ClassA
+    modifiers: private
+    value: 
+    CLASS: ClassA
+      SUPERCLASS: java.lang.Object
+        CLASS: Object
+          CONSTRUCTOR
+            name: java.lang.Object
+            modifiers: public
+          METHOD
+            method: finalize
+            returnType: void
+            modifier: protected
+            exceptions: [java.lang.Throwable]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final native
+            exceptions: [java.lang.InterruptedException]
+            parameterTypes: [long]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final
+            exceptions: [java.lang.InterruptedException]
+            parameterTypes: [long, int]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final
+            exceptions: [java.lang.InterruptedException]
+          METHOD
+            method: equals
+            returnType: boolean
+            modifier: public
+            parameterTypes: [java.lang.Object]
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: hashCode
+            returnType: int
+            modifier: public native
+          METHOD
+            method: getClass
+            returnType: java.lang.Class
+            modifier: public final native
+          METHOD
+            method: clone
+            returnType: java.lang.Object
+            modifier: protected native
+            exceptions: [java.lang.CloneNotSupportedException]
+          METHOD
+            method: notify
+            returnType: void
+            modifier: public final native
+          METHOD
+            method: notifyAll
+            returnType: void
+            modifier: public final native
+          METHOD
+            method: registerNatives
+            returnType: void
+            modifier: private static native
+      INTERFACE
+        name: Serializable
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 3
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      INTERFACE
+        name: Runnable
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 3
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      CONSTRUCTOR
+        name: data.ClassA
+        modifiers: public
+      CONSTRUCTOR
+        name: data.ClassA
+        parameters: [int]
+        modifiers: public
+      METHOD
+        method: run
+        returnType: void
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: setVal
+        returnType: void
+        modifier: public
+        exceptions: [java.lang.Exception]
+        parameterTypes: [int]
+      METHOD
+        method: getVal
+        returnType: int
+        modifier: public
+      METHOD
+        method: printSomething
+        returnType: void
+        modifier: private
+      FIELD
+        name: val
+        type: int
+        modifiers: private
+        value: 3
+      FIELD
+        name: val2
+        type: double
+        modifiers: private
+        value: 0.2
+      FIELD
+        name: val3
+        type: boolean
+        modifiers: private
+        value: true
+  FIELD
+    name: val2
+    type: ClassA
+    modifiers: private
+    value: 
+    CLASS: ClassA
+      SUPERCLASS: java.lang.Object
+        CLASS: Object
+          CONSTRUCTOR
+            name: java.lang.Object
+            modifiers: public
+          METHOD
+            method: finalize
+            returnType: void
+            modifier: protected
+            exceptions: [java.lang.Throwable]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final native
+            exceptions: [java.lang.InterruptedException]
+            parameterTypes: [long]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final
+            exceptions: [java.lang.InterruptedException]
+            parameterTypes: [long, int]
+          METHOD
+            method: wait
+            returnType: void
+            modifier: public final
+            exceptions: [java.lang.InterruptedException]
+          METHOD
+            method: equals
+            returnType: boolean
+            modifier: public
+            parameterTypes: [java.lang.Object]
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: hashCode
+            returnType: int
+            modifier: public native
+          METHOD
+            method: getClass
+            returnType: java.lang.Class
+            modifier: public final native
+          METHOD
+            method: clone
+            returnType: java.lang.Object
+            modifier: protected native
+            exceptions: [java.lang.CloneNotSupportedException]
+          METHOD
+            method: notify
+            returnType: void
+            modifier: public final native
+          METHOD
+            method: notifyAll
+            returnType: void
+            modifier: public final native
+          METHOD
+            method: registerNatives
+            returnType: void
+            modifier: private static native
+      INTERFACE
+        name: Serializable
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 12
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      INTERFACE
+        name: Runnable
+          METHOD
+            method: run
+            returnType: void
+            modifier: public
+          METHOD
+            method: toString
+            returnType: java.lang.String
+            modifier: public
+          METHOD
+            method: setVal
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int]
+          METHOD
+            method: getVal
+            returnType: int
+            modifier: public
+          METHOD
+            method: printSomething
+            returnType: void
+            modifier: private
+          FIELD
+            name: val
+            type: int
+            modifiers: private
+            value: 12
+          FIELD
+            name: val2
+            type: double
+            modifiers: private
+            value: 0.2
+          FIELD
+            name: val3
+            type: boolean
+            modifiers: private
+            value: true
+      CONSTRUCTOR
+        name: data.ClassA
+        modifiers: public
+      CONSTRUCTOR
+        name: data.ClassA
+        parameters: [int]
+        modifiers: public
+      METHOD
+        method: run
+        returnType: void
+        modifier: public
+      METHOD
+        method: toString
+        returnType: java.lang.String
+        modifier: public
+      METHOD
+        method: setVal
+        returnType: void
+        modifier: public
+        exceptions: [java.lang.Exception]
+        parameterTypes: [int]
+      METHOD
+        method: getVal
+        returnType: int
+        modifier: public
+      METHOD
+        method: printSomething
+        returnType: void
+        modifier: private
+      FIELD
+        name: val
+        type: int
+        modifiers: private
+        value: 12
+      FIELD
+        name: val2
+        type: double
+        modifiers: private
+        value: 0.2
+      FIELD
+        name: val3
+        type: boolean
+        modifiers: private
+        value: true
+  FIELD
+    name: val3
+    type: ClassA
+    modifiers: private
+    value: null
+======================================================
