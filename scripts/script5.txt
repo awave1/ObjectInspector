@@ -16,15 +16,15 @@ CLASS: ClassD
       METHOD
         method: wait
         returnType: void
-        modifier: public final native
-        exceptions: [java.lang.InterruptedException]
-        parameterTypes: [long]
-      METHOD
-        method: wait
-        returnType: void
         modifier: public final
         exceptions: [java.lang.InterruptedException]
         parameterTypes: [long, int]
+      METHOD
+        method: wait
+        returnType: void
+        modifier: public final native
+        exceptions: [java.lang.InterruptedException]
+        parameterTypes: [long]
       METHOD
         method: wait
         returnType: void
@@ -53,6 +53,10 @@ CLASS: ClassD
         modifier: protected native
         exceptions: [java.lang.CloneNotSupportedException]
       METHOD
+        method: registerNatives
+        returnType: void
+        modifier: private static native
+      METHOD
         method: notify
         returnType: void
         modifier: public final native
@@ -60,10 +64,6 @@ CLASS: ClassD
         method: notifyAll
         returnType: void
         modifier: public final native
-      METHOD
-        method: registerNatives
-        returnType: void
-        modifier: private static native
   CONSTRUCTOR
     name: data.ClassD
     modifiers: public
@@ -83,7 +83,7 @@ CLASS: ClassD
     name: val
     type: ClassA
     modifiers: private
-    referenceValue: data.ClassA@3e3abc88
+    referenceValue: data.ClassA@7cc355be
   FIELD
     name: val2
     type: ClassA

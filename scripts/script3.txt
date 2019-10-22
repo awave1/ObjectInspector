@@ -20,15 +20,15 @@ CLASS: ClassB
               METHOD
                 method: wait
                 returnType: void
-                modifier: public final native
-                exceptions: [java.lang.InterruptedException]
-                parameterTypes: [long]
-              METHOD
-                method: wait
-                returnType: void
                 modifier: public final
                 exceptions: [java.lang.InterruptedException]
                 parameterTypes: [long, int]
+              METHOD
+                method: wait
+                returnType: void
+                modifier: public final native
+                exceptions: [java.lang.InterruptedException]
+                parameterTypes: [long]
               METHOD
                 method: wait
                 returnType: void
@@ -57,6 +57,10 @@ CLASS: ClassB
                 modifier: protected native
                 exceptions: [java.lang.CloneNotSupportedException]
               METHOD
+                method: registerNatives
+                returnType: void
+                modifier: private static native
+              METHOD
                 method: notify
                 returnType: void
                 modifier: public final native
@@ -64,10 +68,6 @@ CLASS: ClassB
                 method: notifyAll
                 returnType: void
                 modifier: public final native
-              METHOD
-                method: registerNatives
-                returnType: void
-                modifier: private static native
           CONSTRUCTOR
             name: data.ClassD
             modifiers: public
@@ -87,7 +87,7 @@ CLASS: ClassB
             name: val
             type: ClassA
             modifiers: private
-            referenceValue: data.ClassA@5b2133b1
+            referenceValue: data.ClassA@4f3f5b24
           FIELD
             name: val2
             type: ClassA
@@ -129,17 +129,10 @@ CLASS: ClassB
             returnType: java.lang.String
             modifier: public
           METHOD
-            method: func0
+            method: func3
             returnType: void
-            modifier: public
-            exceptions: [java.lang.Exception]
-            parameterTypes: [int, boolean]
-          METHOD
-            method: func1
-            returnType: void
-            modifier: public
-            exceptions: [java.lang.Exception]
-            parameterTypes: [int, double, boolean, java.lang.String]
+            modifier: public abstract
+            parameterTypes: [int]
           METHOD
             method: func2
             returnType: int
@@ -147,25 +140,32 @@ CLASS: ClassB
             exceptions: [java.lang.Exception, java.lang.ArithmeticException, java.lang.IllegalMonitorStateException]
             parameterTypes: [java.lang.String]
           METHOD
-            method: func3
+            method: func1
             returnType: void
-            modifier: public abstract
-            parameterTypes: [int]
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int, double, boolean, java.lang.String]
+          METHOD
+            method: func0
+            returnType: void
+            modifier: public
+            exceptions: [java.lang.Exception]
+            parameterTypes: [int, boolean]
           FIELD
             name: val2
             type: ClassA
             modifiers: private
-            referenceValue: data.ClassA@1c20c684
+            referenceValue: data.ClassA@10f87f48
           FIELD
             name: val3
             type: ClassA
             modifiers: private
-            referenceValue: data.ClassA@1fb3ebeb
+            referenceValue: data.ClassA@b4c966a
           FIELD
             name: val4
             type: ClassA
             modifiers: private
-            referenceValue: data.ClassA@548c4f57
+            referenceValue: data.ClassA@2f4d3709
       CONSTRUCTOR
         name: data.ClassC
         modifiers: public
@@ -182,17 +182,10 @@ CLASS: ClassB
         returnType: java.lang.String
         modifier: public
       METHOD
-        method: func0
+        method: func3
         returnType: void
-        modifier: public
-        exceptions: [java.lang.Exception]
-        parameterTypes: [int, boolean]
-      METHOD
-        method: func1
-        returnType: void
-        modifier: public
-        exceptions: [java.lang.Exception]
-        parameterTypes: [int, double, boolean, java.lang.String]
+        modifier: public abstract
+        parameterTypes: [int]
       METHOD
         method: func2
         returnType: int
@@ -200,25 +193,32 @@ CLASS: ClassB
         exceptions: [java.lang.Exception, java.lang.ArithmeticException, java.lang.IllegalMonitorStateException]
         parameterTypes: [java.lang.String]
       METHOD
-        method: func3
+        method: func1
         returnType: void
-        modifier: public abstract
-        parameterTypes: [int]
+        modifier: public
+        exceptions: [java.lang.Exception]
+        parameterTypes: [int, double, boolean, java.lang.String]
+      METHOD
+        method: func0
+        returnType: void
+        modifier: public
+        exceptions: [java.lang.Exception]
+        parameterTypes: [int, boolean]
       FIELD
         name: val2
         type: ClassA
         modifiers: private
-        referenceValue: data.ClassA@1c20c684
+        referenceValue: data.ClassA@10f87f48
       FIELD
         name: val3
         type: ClassA
         modifiers: private
-        referenceValue: data.ClassA@1fb3ebeb
+        referenceValue: data.ClassA@b4c966a
       FIELD
         name: val4
         type: ClassA
         modifiers: private
-        referenceValue: data.ClassA@548c4f57
+        referenceValue: data.ClassA@2f4d3709
   INTERFACE
     name: Runnable
       METHOD
@@ -238,12 +238,12 @@ CLASS: ClassB
         name: val
         type: ClassA
         modifiers: private
-        referenceValue: data.ClassA@1218025c
+        referenceValue: data.ClassA@1d81eb93
       FIELD
         name: val2
         type: ClassA
         modifiers: private
-        referenceValue: data.ClassA@816f27d
+        referenceValue: data.ClassA@7291c18f
       FIELD
         name: val3
         type: ClassA
@@ -269,12 +269,12 @@ CLASS: ClassB
     name: val
     type: ClassA
     modifiers: private
-    referenceValue: data.ClassA@1218025c
+    referenceValue: data.ClassA@1d81eb93
   FIELD
     name: val2
     type: ClassA
     modifiers: private
-    referenceValue: data.ClassA@816f27d
+    referenceValue: data.ClassA@7291c18f
   FIELD
     name: val3
     type: ClassA
