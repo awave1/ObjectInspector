@@ -1,9 +1,8 @@
-import java.lang.reflect.Constructor;
+import loader.InspectorLoader;
+
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 public class DynamicReflectiveInspector {
-    private static final String INSPECT_METHOD = "inspect";
 
     public static void main(String[] args) {
         if (args.length < 2) {
@@ -19,19 +18,10 @@ public class DynamicReflectiveInspector {
         String classToInspectPath = args[1];
         boolean isRecursive = args.length == 3 && args[2] != null && Boolean.parseBoolean(args[2]);
 
-        ClassLoader classLoader = DynamicReflectiveInspector.class.getClassLoader();
         try {
-            Class inspectorClass = classLoader.loadClass(inspectorClassPath);
-            Constructor inspectorConstructor = inspectorClass.getConstructor();
-            Object inspectorInstance = inspectorConstructor.newInstance();
-
-            Class classToInspect = classLoader.loadClass(classToInspectPath);
-            Constructor classToInspectConstructor = classToInspect.getConstructor();
-
-            Method inspectMethod = inspectorClass.getMethod(INSPECT_METHOD, Object.class, boolean.class);
-            System.out.println("Recursive: " + isRecursive);
-            inspectMethod.invoke(inspectorInstance, classToInspectConstructor.newInstance(), isRecursive);
-        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
+            InspectorLoader inspectorLoader = new InspectorLoader(DynamicReflectiveInspector.class.getClassLoader());
+            inspectorLoader.invokeInspect(inspectorClassPath, classToInspectPath, isRecursive);
+        } catch (ReflectiveOperationException e) {
             e.printStackTrace();
         }
     }
