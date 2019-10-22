@@ -7,7 +7,7 @@ import java.io.*;
 
 public class Driver {
     public static void main(String[] args) throws Exception {
-        boolean isRecursive = false;
+        boolean isRecursive = true;
         boolean useStdOut = false;
 
         if (args.length >= 1) {
