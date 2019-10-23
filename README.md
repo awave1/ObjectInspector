@@ -38,14 +38,27 @@ Running the project
 Running the project with command line arguments
 
 ```bash
-./gradlew run --console=plain --args="[useRecursion] [useStdOut]"
+./gradlew run --console=plain --args="[isRecursive] [useStdOut]"
+```
+
+To execute `DynamicReflectiveInspector`
+
+```bash
+./gradlew run -PmainClass=DynamicReflectiveInspector --console=plain --args="[inspectorClassPath] [classToInspectPath] [isRecursive]"
 ```
 
 Supported command line arguments:
 
-* `useRecursion: true|false` - specifies whether to inspect objects recursively, `false` by default
+**`Driver`**:
+
+* `isRecursive: true|false` - specifies whether to inspect objects recursively, `true` by default
 * `useStdOut: true|false` - specifies whether to use standard output, by default will write to files
 
+**`DynamicReflectiveInspector`**
+
+* `inspectorClassPath` - specifies path to class with `inspect` method. Required
+* `classToInspectPath` - specifies path to class to inspect. Required
+* `isRecursive` - specifies, whether to inspect objects recursively. Optional
 
 ## Running the tests
 

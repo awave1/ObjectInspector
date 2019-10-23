@@ -313,16 +313,16 @@ CLASS: ClassB
             returnType: java.lang.String
             modifier: public
           METHOD
-            method: func3
-            returnType: void
-            modifier: public abstract
-            parameterTypes: [int]
-          METHOD
             method: func0
             returnType: void
             modifier: public
             exceptions: [java.lang.Exception]
             parameterTypes: [int, boolean]
+          METHOD
+            method: func3
+            returnType: void
+            modifier: public abstract
+            parameterTypes: [int]
           METHOD
             method: func1
             returnType: void
@@ -918,16 +918,16 @@ CLASS: ClassB
         returnType: java.lang.String
         modifier: public
       METHOD
-        method: func3
-        returnType: void
-        modifier: public abstract
-        parameterTypes: [int]
-      METHOD
         method: func0
         returnType: void
         modifier: public
         exceptions: [java.lang.Exception]
         parameterTypes: [int, boolean]
+      METHOD
+        method: func3
+        returnType: void
+        modifier: public abstract
+        parameterTypes: [int]
       METHOD
         method: func1
         returnType: void
