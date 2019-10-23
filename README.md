@@ -4,7 +4,7 @@ Reflective Object Inspector performs complete introspective of Java objects at a
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Project can also be found on U of C gitlab [artem.golovin/ObjectInspector](https://gitlab.cpsc.ucalgary.ca/artem.golovin/ObjectInspector).
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Project can also be found on GitLab [artem.golovin/ObjectInspector](https://gitlab.cpsc.ucalgary.ca/artem.golovin/ObjectInspector).
 
 ### Prerequisites
 
