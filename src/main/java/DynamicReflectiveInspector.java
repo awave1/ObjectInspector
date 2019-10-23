@@ -21,7 +21,11 @@ public class DynamicReflectiveInspector {
         try {
             InspectorLoader inspectorLoader = new InspectorLoader(DynamicReflectiveInspector.class.getClassLoader());
             inspectorLoader.invokeInspect(inspectorClassPath, classToInspectPath, isRecursive);
-        } catch (ReflectiveOperationException e) {
+        } catch (ClassNotFoundException e) {
+            System.out.println("DynamicReflectiveInspector was unable to find one of the specified classes");
+        } catch (NoSuchMethodException e) {
+            System.out.println("invoke(Object, boolean) method was not found for class " + classToInspectPath);
+        } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
             e.printStackTrace();
         }
     }

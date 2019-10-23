@@ -12,7 +12,7 @@ public class InspectorLoader extends ClassLoader {
     }
 
 
-    public void invokeInspect(String inspectorClassPath, String classToInspectPath, boolean isRecursive) throws ReflectiveOperationException {
+    public void invokeInspect(String inspectorClassPath, String classToInspectPath, boolean isRecursive) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Class inspectorClass = this.loadClass(inspectorClassPath);
         Constructor inspectorConstructor = inspectorClass.getConstructor();
         Object inspectorInstance = inspectorConstructor.newInstance();
