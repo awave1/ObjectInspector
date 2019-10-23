@@ -52,7 +52,7 @@
 \newcommand{\code}[1]{\texttt{#1}}
 
 \newcommand{\gh}[1]{%
-  \href{https://github.com/awave1/assessment-loan-system/commit/#1}{#1}%
+  \href{https://github.com/awave1/ObjectInspector/commit/#1}{#1}%
 }
 
 \title{\b{CPSC 501 -- Assignment 2}}
@@ -65,15 +65,23 @@
 
 \section*{Overview}
 
-\code{ObjectInspector} uses reflection to inspect an object. It can inspect objects recursively. \code{Inspector} class lists all off th
-
-The project can also be found on \href{artem.golovin/ObjectInspector}{gitlab.cpsc.ucalgary.ca/artem.golovin/ObjectInspector}.
-%
-%  \subsection*{Refactoring structure}
-%
-%  The refactorings that were made in the project, can be categorized into three categories: \b{minor}, \b{medium} and \b{major}. \b{Minor} refactorings were usually made together with \b{major} and \b{minor} refactorings, thus no commits were directly dedicated to \b{minor} refactorings.
+\code{ObjectInspector} is a reflective object inspector. It performs complete object inspection at a runtime. \code{Inspector} handles the object inspection. General project setup is described in project \href{https://github.com/awave1/ObjectInspector#reflective-object-inspector}{README.md}.
 
 \section*{Refactoring}
+
+Some refactoring was done to the project after the working version was implemented. The following is the list of commits with description of what refactoring was done
+
+\subsection*{Implement \code{InspectorResult} to store inspected information; Implement \\ \code{FieldPair} to make it easier to test object inspection \gh{e9870e19}, \gh{d6a2812c}}
+
+It was necessary to implement some sort of storage for object inspection in order to test the \\ \code{Inspector\#inspect(Object, boolean)} properly. \href{https://github.com/awave1/ObjectInspector/blob/master/src/main/java/inspector/InspectorResult.java}{\code{InspectorResult}} contains different \code{HashMap}s to store inspected information about object. Using that class, we can test the \code{inspect} method without having to compare outputs.
+
+\subsection*{Use \code{IndentedOutput} interface and use custom \code{forEach} to iterate array (\gh{645bfdce})}
+
+Since the output needs to be indented in order to make it easier to read and to say which values are nested, \href{https://github.com/awave1/ObjectInspector/blob/master/src/main/java/utils/IndentedOutput.java}{\code{IndentedOutput}} and method \href{https://github.com/awave1/ObjectInspector/blob/master/src/main/java/inspector/Inspector.java#L199}{\code{indentOutput}} helps to achive that result. Originally, indentation was calculated per each \code{inspect} method. To remove duplicated code, \href{https://github.com/awave1/ObjectInspector/blob/master/src/main/java/inspector/Inspector.java#L199}{\code{indentOutput}} method was added.
+
+\subsection*{Extract value inspection into its own method (\gh{c039ea3e})}
+
+\code{inspectArray} and \code{inspectField} were performing the same tasks, therefore to eliminate redundant code, \href{https://github.com/awave1/ObjectInspector/blob/master/src/main/java/inspector/Inspector.java#L181}{\code{inspectValues}} method was added.
 
 \section*{Git Log}
 \input{log.tex}
