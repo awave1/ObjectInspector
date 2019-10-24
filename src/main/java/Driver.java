@@ -8,7 +8,7 @@ import java.io.*;
 public class Driver {
     public static void main(String[] args) throws Exception {
         boolean isRecursive = true;
-        boolean useStdOut = false;
+        boolean useStdOut = true;
 
         if (args.length >= 1) {
             isRecursive = Boolean.getBoolean(args[0]);
@@ -18,14 +18,14 @@ public class Driver {
             }
         }
 
-        runTest("script1.txt", new ClassA(), isRecursive, useStdOut);
-        runTest("script2.txt", new ClassA(12), isRecursive, useStdOut);
+//        runTest("script1.txt", new ClassA(), isRecursive, useStdOut);
+//        runTest("script2.txt", new ClassA(12), isRecursive, useStdOut);
         runTest("script3.txt", new ClassB(), isRecursive, useStdOut);
-        runTest("script4.txt", new ClassD(32), isRecursive, useStdOut);
-        runTest("script5.txt", new ClassD(), isRecursive, useStdOut);
-        runTest("script6.txt", new ClassB[12], isRecursive, useStdOut);
-        runTest("script7.txt", new ClassB[12][12], isRecursive, useStdOut);
-        runTest("script8.txt", "Test String", isRecursive, useStdOut);
+//        runTest("script4.txt", new ClassD(32), isRecursive, useStdOut);
+//        runTest("script5.txt", new ClassD(), isRecursive, useStdOut);
+//        runTest("script6.txt", new ClassB[12], isRecursive, useStdOut);
+//        runTest("script7.txt", new ClassB[12][12], isRecursive, useStdOut);
+//        runTest("script8.txt", "Test String", isRecursive, useStdOut);
     }
 
     private static void runTest(String filename, Object testObj, boolean isRecursive, boolean useStdOut) {

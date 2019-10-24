@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static utils.Utils.join;
@@ -66,12 +65,17 @@ public class Inspector {
             inspectorResult.addInterfaces(new ArrayList<>(interfaces));
 
             indentOutput(depth, indentation -> {
-                for (Class i : interfaces) {
-                    String name = i.getSimpleName();
+                for (Class anInterface : interfaces) {
+                    String name = anInterface.getSimpleName();
                     leftpad("INTERFACE", indentation);
                     leftpad("name: " + name, indentation + 2);
-                    inspectMethods(c, indentation + 2);
-                    inspectFields(c, obj, recursive, indentation + 2);
+
+                    if (obj.getClass().getSuperclass() != null) {
+                        inspectInterfaces(anInterface, obj, recursive, indentation + 4);
+                    }
+
+                    inspectMethods(anInterface, indentation + 2);
+                    inspectFields(anInterface, obj, recursive, indentation + 2);
                 }
             });
         }
