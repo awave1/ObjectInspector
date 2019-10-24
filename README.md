@@ -6,6 +6,8 @@ Reflective Object Inspector performs complete introspective of Java objects at a
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Project can also be found on GitLab [artem.golovin/ObjectInspector](https://gitlab.cpsc.ucalgary.ca/artem.golovin/ObjectInspector).
 
+Results of object inspection located in `scripts` and recursive output is located in `scripts/recursive`.
+
 ### Prerequisites
 
 * Ensure you're using Java 8
